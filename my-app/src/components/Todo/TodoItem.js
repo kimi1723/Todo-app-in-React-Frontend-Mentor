@@ -4,7 +4,7 @@ const TodoItem = ({ text }) => {
   return (
     <li className={classes.li}>
       <div className={classes["text-container"]}>
-        <input type="radio" className={classes["radio-input"]} />
+        <input type="checkbox" className={classes["radio-input"]} />
         <p>{text}</p>
       </div>
       <svg
