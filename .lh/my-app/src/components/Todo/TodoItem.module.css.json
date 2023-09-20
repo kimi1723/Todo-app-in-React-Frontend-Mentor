@@ -1,0 +1,30 @@
+{
+    "sourceFile": "my-app/src/components/Todo/TodoItem.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1695214783362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695214813422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,9 @@\n+.li {\r\n+display: flex;\r\n+align-items: center;\r\n+}\r\n+\r\n .radio-input {\r\n   -webkit-appearance: none;\r\n   appearance: none;\r\n   margin-right: 1em;\r\n"
+                },
+                {
+                    "date": 1695214825407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n .li {\r\n   display: flex;\r\n   align-items: center;\r\n+  margin: 1em;\r\n }\r\n \r\n .radio-input {\r\n   -webkit-appearance: none;\r\n"
+                },
+                {
+                    "date": 1695214834018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n .li {\r\n   display: flex;\r\n   align-items: center;\r\n-  margin: 1em;\r\n+  margin: 1.2em 0.6em;\r\n }\r\n \r\n .radio-input {\r\n   -webkit-appearance: none;\r\n"
+                }
+            ],
+            "date": 1695214783362,
+            "name": "Commit-0",
+            "content": ".radio-input {\r\n  -webkit-appearance: none;\r\n  appearance: none;\r\n  margin-right: 1em;\r\n  height: 1.5em;\r\n  width: 1.5em;\r\n  font: inherit;\r\n  background-color: hsl(235, 24%, 19%);\r\n  border: 0.15em solid hsl(233, 14%, 35%);\r\n  border-radius: 50%;\r\n  cursor: pointer;\r\n}"
+        }
+    ]
+}

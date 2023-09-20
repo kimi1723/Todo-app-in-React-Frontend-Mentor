@@ -1,0 +1,26 @@
+{
+    "sourceFile": "my-app/src/components/Todo/TodoItem.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695214380714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695214421208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n-const TodoItem = () => {};\r\n+import classes from './TodoItem.module.css';\r\n \r\n+const TodoItem = () => {\r\n+    \r\n+};\r\n+\r\n export default TodoItem;\r\n"
+                },
+                {
+                    "date": 1695214433057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n import classes from \"./TodoItem.module.css\";\r\n \r\n-const TodoItem = () => {};\r\n+const TodoItem = () => {\r\n+    return <>\r\n+    <li>\r\n+        </li></>\r\n+};\r\n \r\n export default TodoItem;\r\n"
+                }
+            ],
+            "date": 1695214380714,
+            "name": "Commit-0",
+            "content": "const TodoItem = () => {}\r\n\r\nexport default TodoItem"
+        }
+    ]
+}

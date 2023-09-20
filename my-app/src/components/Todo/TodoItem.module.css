@@ -1,0 +1,26 @@
+.li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+  font-size: 1rem;
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+}
+
+.radio-input {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-right: 1em;
+  aspect-ratio: 1/1;
+  height: 1.6em;
+  font: inherit;
+  background-color: hsl(235, 24%, 19%);
+  border: 0.15em solid hsl(233, 14%, 35%);
+  border-radius: 50%;
+  cursor: pointer;
+}

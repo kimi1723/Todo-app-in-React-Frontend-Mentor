@@ -1,0 +1,22 @@
+{
+    "sourceFile": "my-app/src/components/Layout/Main.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1695215002668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695215019286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n .main {\r\n-  padding: 0 1em;\r\n+  padding: 0 1.5em;\r\n }\r\n"
+                }
+            ],
+            "date": 1695215002668,
+            "name": "Commit-0",
+            "content": ".main {\r\n    padding: 0 1em;\r\n}"
+        }
+    ]
+}
