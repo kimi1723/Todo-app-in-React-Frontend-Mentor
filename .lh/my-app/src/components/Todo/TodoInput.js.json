@@ -1,0 +1,34 @@
+{
+    "sourceFile": "my-app/src/components/Todo/TodoInput.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1695210500752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695210535393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-const TodoInput = () => {}\r\n+const TodoInput = () => {};\r\n \r\n\\ No newline at end of file\n-export default TodoInput;\n+export default TodoInput;\r\n"
+                },
+                {
+                    "date": 1695211079526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n-const TodoInput = () => {};\r\n+import classes from './TodoInput.css';\r\n \r\n+const TodoInput = () => {\r\n+    return <input type=\"text\" id=\"name\" className={classes[`todo-input`]}/>\r\n+};\r\n+\r\n export default TodoInput;\r\n"
+                },
+                {
+                    "date": 1695211106873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import classes from \"./TodoInput.css\";\r\n+import classes from \"./TodoInput.module.css\";\r\n \r\n const TodoInput = () => {\r\n   return <input type=\"text\" id=\"name\" className={classes[`todo-input`]} />;\r\n };\r\n"
+                },
+                {
+                    "date": 1695211112312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import classes from \"./TodoInput.css\";\r\n+import classes from \"./TodoInput.module.css\";\r\n \r\n const TodoInput = () => {\r\n   return <input type=\"text\" id=\"name\" className={classes[`todo-input`]} />;\r\n };\r\n"
+                }
+            ],
+            "date": 1695210500752,
+            "name": "Commit-0",
+            "content": "const TodoInput = () => {}\r\n\r\nexport default TodoInput;"
+        }
+    ]
+}

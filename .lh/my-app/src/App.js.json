@@ -1,0 +1,26 @@
+{
+    "sourceFile": "my-app/src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695208236678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695208315246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import logo from \"./logo.svg\";\n+\n import \"./App.css\";\n \n function App() {\n   return <></>;\n"
+                },
+                {
+                    "date": 1695209446902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import classes from './App.module.css';\n+\n function App() {\n   return <></>;\n }\n \n"
+                }
+            ],
+            "date": 1695208236678,
+            "name": "Commit-0",
+            "content": "import logo from './logo.svg';\nimport './App.css';\n\nfunction App() {\n  return (\n    \n  );\n}\n\nexport default App;\n"
+        }
+    ]
+}

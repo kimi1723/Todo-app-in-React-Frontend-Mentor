@@ -1,0 +1,26 @@
+{
+    "sourceFile": "my-app/src/components/Layout/Header.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695210785336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695210793797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n h1 {\r\n   text-transform: uppercase;\r\n-  font-weight: bold;\r\n+  letter-spacing: 1.5;\r\n }\r\n"
+                },
+                {
+                    "date": 1695210802882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n h1 {\r\n   text-transform: uppercase;\r\n-  letter-spacing: 1.5;\r\n+  letter-spacing: 1.5em;\r\n }\r\n"
+                }
+            ],
+            "date": 1695210785336,
+            "name": "Commit-0",
+            "content": "h1 {\r\n    text-transform: uppercase;\r\n}"
+        }
+    ]
+}

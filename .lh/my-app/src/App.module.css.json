@@ -1,0 +1,26 @@
+{
+    "sourceFile": "my-app/src/App.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695209462148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695209813432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n body {\r\n-  background-color: #000;\r\n+  background-color: hsl(236, 9%, 61%)\r\n }\r\n"
+                },
+                {
+                    "date": 1695209827441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n body {\r\n-  background-color: hsl(236, 9%, 61%);\r\n+  background-color: hsl(233, 14%, 35%)\r\n }\r\n"
+                }
+            ],
+            "date": 1695209462148,
+            "name": "Commit-0",
+            "content": "body {\r\n    background-color: #000;\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "my-app/src/components/Layout/Main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1695210631865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1695210631865,
+            "name": "Commit-0",
+            "content": "const Main = () => {}\r\n\r\nexport default Main;"
+        }
+    ]
+}
