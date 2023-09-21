@@ -1,73 +1,115 @@
 .li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5em;
-  list-style: none;
-  font-size: 1rem;
-  border-bottom: 1px solid hsl(233, 14%, 35%);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem;
+	list-style: none;
+	font-size: 1rem;
+	border-bottom: 1px solid hsl(233, 14%, 35%);
 }
 
 .text-container {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-.radio-input {
-  position: relative;
-  -webkit-appearance: none;
-  appearance: none;
-  margin-right: 1em;
-  aspect-ratio: 1/1;
-  height: 1.6em;
-  font: inherit;
-  border: 0.15em solid hsl(233, 14%, 35%);
-  border-radius: 50%;
-  cursor: pointer;
+.checkbox {
+	position: relative;
+	-webkit-appearance: none;
+	appearance: none;
+	margin-right: 1em;
+	aspect-ratio: 1/1;
+	height: 1.6em;
+	font: inherit;
+	border: 0.15em solid hsl(233, 14%, 35%);
+	border-radius: 50%;
+	transition: border 0.6s;
+	cursor: pointer;
+	z-index: 1;
 }
 
-.radio-input::after {
-  opacity: 0;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  border: 0.15em solid transparent;
-  background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
-    border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-  transition: visibility 0.5s, opacity 0.5s;
-  visibility: hidden;
+.checkbox::after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 50%;
+	border: 0.15em solid transparent;
+	background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+	-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: destination-out;
+	mask-composite: exclude;
+	transition: visibility 0.5s, opacity 0.5s;
+	visibility: hidden;
 }
 
-.radio-input:hover::after {
-  opacity: 1;
-  visibility: visible;
+.checkbox:hover::after,
+.checkbox:active::after,
+.checkbox:focus::after {
+	opacity: 1;
+	visibility: visible;
 }
 
-.radio-input:checked {
-  background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  transition: background 0.5s;
+.checkbox:checked + .gradient-bg {
+	opacity: 1;
+	visibility: visible;
 }
 
-.radio-input:checked:hover {
-  border: 0.15em solid hsl(233, 14%, 35%);
+.checkbox:checked:hover {
+	border: 0.15em solid hsl(233, 14%, 35%);
 }
 
-/* .radio-input:checked::after {
-  opacity: 1;
-  visibility: visible;
-} */
+.checkbox:checked::before {
+	opacity: 1;
+	visibility: visible;
+}
 
-.radio-input:hover {
-  border: 0.15em solid transparent;
+.checkbox::before {
+	content: '';
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 11px;
+	height: 9px;
+	background-image: url(../../icon-check.svg);
+	background-size: cover;
+	transition: opacity 0.5s;
+}
+
+.checkbox:hover,
+.checkbox:focus,
+.checkbox:active {
+	border: 0.15em solid transparent;
+	outline: none;
+}
+
+.gradient-bg {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	margin-right: 1em;
+	aspect-ratio: 1/1;
+	height: 1.6em;
+	border-radius: 50%;
+	background: linear-gradient(15deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+	transition: opacity 0.5s;
+	z-index: 0;
+}
+
+.check-icon {
+	position: absolute;
+}
+
+.todo-text {
+	cursor: pointer;
 }
 
 .cross-icon {
-  cursor: pointer;
+	cursor: pointer;
 }

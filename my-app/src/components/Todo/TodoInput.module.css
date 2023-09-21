@@ -1,42 +1,84 @@
-.inputs-container {
-  display: flex;
-  align-items: center;
-  padding: 0.8em 1.5em;
-  background-color: hsl(235, 24%, 19%);
-  border-radius: 10px;
+.input-container {
+	display: flex;
+	align-items: center;
+	padding: 0.8em 1.5rem;
+	background-color: hsl(235, 24%, 19%);
+	border-radius: 10px;
 }
 
 .label {
-  margin-right: 1em;
-  aspect-ratio: 1/1;
-  height: 1.6em;
-  background-color: hsl(235, 24%, 19%);
-  border: 0.15em solid hsl(233, 14%, 35%);
-  border-radius: 50%;
-  cursor: pointer;
+	position: relative;
+	margin-right: 1em;
+	aspect-ratio: 1/1;
+	height: 1.6em;
+	background-color: hsl(235, 24%, 19%);
+	border: 0.15em solid hsl(233, 14%, 35%);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: border 0.5s;
+}
+
+.label::after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 50%;
+	border: 0.15em solid transparent;
+	background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+	-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: destination-out;
+	mask-composite: exclude;
+	transition: visibility 0.5s, opacity 0.5s;
+	visibility: hidden;
+}
+
+.label:hover {
+	border: 0.15em solid transparent;
+}
+
+.label:hover::after {
+	opacity: 1;
+	visibility: visible;
 }
 
 .input {
-  padding: 0.2em 0.4em;
-  height: 3em;
-  width: 100%;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  color: hsl(234, 11%, 52%);
-  background-color: hsl(235, 24%, 19%);
-  border: solid 1px transparent;
-  border-radius: 8px;
-  transition: color 0.3s;
-  cursor: pointer;
+	padding: 0.2em 0.4em;
+	height: 3em;
+	width: 100%;
+	font-size: 1rem;
+	letter-spacing: 0.1em;
+	color: hsl(234, 11%, 52%);
+	background-color: hsl(235, 24%, 19%);
+	border: solid 1px transparent;
+	border-radius: 8px;
+	transition: color 0.3s;
+	cursor: pointer;
 }
 
 .input:hover,
 .input:active,
 .input:focus {
-  color: hsl(236, 33%, 92%);
+	color: hsl(236, 33%, 92%);
 }
 
 .input:active,
 .input:focus {
-  outline: none;
+	outline: none;
+}
+
+.input-container:has(.input:hover) .label,
+.input-container:has(.input:active) .label,
+.input-container:has(.input:focus) .label {
+	border: 0.15em solid transparent;
+}
+
+.input-container:has(.input:hover) .label::after,
+.input-container:has(.input:active) .label::after,
+.input-container:has(.input:focus) .label::after {
+	opacity: 1;
+	visibility: visible;
 }
