@@ -1,15 +1,23 @@
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 1.5em;
-  height: clamp(200px, 35vh, 40vh);
-  width: 100vw;
-  background-image: url(../../../public/images/bg-mobile-dark.jpg);
-  background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1.5em;
+	height: clamp(200px, 30vh, 40vh);
+	width: 100vw;
+	background-image: url(../../images/bg-mobile-dark.jpg);
+	background-size: cover;
 }
 
 .heading {
-  text-transform: uppercase;
-  letter-spacing: 0.4em;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
 }
+
+@media (min-width: 768px) {
+	.header {
+		background-image: url(../../images/bg-desktop-dark.jpg);
+	}
+}
+

@@ -1,5 +1,13 @@
 .ul {
-  margin-top: -2em;
-  background-color: hsl(235, 24%, 19%);
-  border-radius: 8px;
+	margin-top: -1em;
+	background-color: hsl(235, 24%, 19%);
+	border-radius: 8px;
+	width: 100%;
+	max-width: 576px;
+}
+
+@media (min-height: 768px) {
+	.ul {
+		margin-top: -1.5em;
+	}
 }

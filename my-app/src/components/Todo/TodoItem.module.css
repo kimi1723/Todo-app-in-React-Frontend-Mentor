@@ -38,7 +38,7 @@
 	bottom: 0;
 	border-radius: 50%;
 	border: 0.15em solid transparent;
-	background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+	background: linear-gradient(15deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
 	-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;
@@ -110,6 +110,23 @@
 	cursor: pointer;
 }
 
-.cross-icon {
+.cross-btn {
+	background: none;
+	outline: none;
+	border: none;
 	cursor: pointer;
+}
+
+@media (pointer: fine) {
+	.li:hover .cross-btn,
+	.li:focus-within .cross-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.cross-btn {
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
 }
