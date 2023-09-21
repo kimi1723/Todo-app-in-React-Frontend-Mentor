@@ -1,0 +1,18 @@
+{
+    "sourceFile": "my-app/src/components/Todo/TodoListDesktopFooter.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1695304563023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1695304563023,
+            "name": "Commit-0",
+            "content": "import classes from './TodoListFooter.module.css';\r\n\r\nconst TodoDesktopFooter = () => {\r\n\treturn (\r\n\t\t<>\r\n\t\t\t<p className={classes['items-left']}>5 items left</p>\r\n\t\t\t<div className={classes['filter-buttons-container']}>\r\n\t\t\t\t<button className={classes['filter-button']}>All</button>\r\n\t\t\t\t<button className={classes['filter-button']}>Active</button>\r\n\t\t\t\t<button className={classes['filter-button']}>Completed</button>\r\n\t\t\t</div>\r\n\t\t\t<button className={classes['filter-button']}>Clear Completed</button>\r\n\t\t</>\r\n\t);\r\n};\r\n\r\nexport default TodoListDesktopFooter;\r\n"
+        }
+    ]
+}

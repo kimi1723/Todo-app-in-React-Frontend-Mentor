@@ -1,0 +1,30 @@
+{
+    "sourceFile": "my-app/src/components/Todo/TodoMobileFooter.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1695304255210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695304260503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,5 @@\n \t\t\t\t<button className={classes['filter-button']}>Completed</button>\r\n \t\t\t</div>\r\n }\r\n \r\n+export default TodoMobileFooter;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695304267004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const TodoMobileFooter = () => {\r\n \treturn (\r\n \t\t<>\r\n-\t\t\t{' '}\r\n+\r\n \t\t\t<footer className={classes.footer}>\r\n \t\t\t\t<p className={classes['items-left']}>5 items left</p>\r\n \t\t\t\t<button className={classes['filter-button']}>Clear Completed</button>\r\n \t\t\t</footer>\r\n"
+                },
+                {
+                    "date": 1695304274232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import classes from './'\r\n+const TodoMobileFooter = () => {\r\n+\treturn (\r\n+\t\t<>\r\n+\t\t\t<footer className={classes.footer}>\r\n+\t\t\t\t<p className={classes['items-left']}>5 items left</p>\r\n+\t\t\t\t<button className={classes['filter-button']}>Clear Completed</button>\r\n+\t\t\t</footer>\r\n+\t\t\t<div className={classes['filter-buttons-container']}>\r\n+\t\t\t\t<button className={classes['filter-button']}>All</button>\r\n+\t\t\t\t<button className={classes['filter-button']}>Active</button>\r\n+\t\t\t\t<button className={classes['filter-button']}>Completed</button>\r\n+\t\t\t</div>\r\n+\t\t</>\r\n+\t);\r\n+};\r\n+\r\n+export default TodoMobileFooter;\r\n"
+                }
+            ],
+            "date": 1695304255210,
+            "name": "Commit-0",
+            "content": "const TodoMobileFooter = () => {\r\n    <footer className={classes.footer}>\r\n\t\t\t\t<p className={classes['items-left']}>5 items left</p>\r\n\t\t\t\t<button className={classes['filter-button']}>Clear Completed</button>\r\n\t\t\t</footer>\r\n\t\t\t<div className={classes['filter-buttons-container']}>\r\n\t\t\t\t<button className={classes['filter-button']}>All</button>\r\n\t\t\t\t<button className={classes['filter-button']}>Active</button>\r\n\t\t\t\t<button className={classes['filter-button']}>Completed</button>\r\n\t\t\t</div>\r\n}\r\n\r\n"
+        }
+    ]
+}

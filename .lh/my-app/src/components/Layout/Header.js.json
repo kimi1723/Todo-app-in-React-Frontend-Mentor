@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1695210300970,
@@ -32,6 +32,18 @@
                 {
                     "date": 1695210929660,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Header = () => {\r\n   return (\r\n     <header className={classes.header}>\r\n-      <h1>Todo</h1>\r\n+      <h1 className={classes.heading}>Todo</h1>\r\n       <TodoInput />\r\n     </header>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1695302007807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n const Header = () => {\r\n   return (\r\n     <header className={classes.header}>\r\n+      <div></div>\r\n       <h1 className={classes.heading}>Todo</h1>\r\n       <TodoInput />\r\n     </header>\r\n   );\r\n"
+                },
+                {
+                    "date": 1695302016156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Header = () => {\r\n   return (\r\n     <header className={classes.header}>\r\n-      <div></div>\r\n+      <div className={classes['header-bg']}></div>\r\n       <h1 className={classes.heading}>Todo</h1>\r\n       <TodoInput />\r\n     </header>\r\n   );\r\n"
+                },
+                {
+                    "date": 1695302067325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import classes from './Header.module.css';\r\n+import TodoInput from '../Todo/TodoInput';\r\n+\r\n+const Header = () => {\r\n+\treturn (\r\n+\t\t\t<div className={classes['header-bg']}></div>\r\n+\t\t<header className={classes.header}>\r\n+\t\t\t<h1 className={classes.heading}>Todo</h1>\r\n+\t\t\t<TodoInput />\r\n+\t\t</header>\r\n+\t);\r\n+};\r\n+\r\n+export default Header;\r\n"
                 }
             ],
             "date": 1695210300970,

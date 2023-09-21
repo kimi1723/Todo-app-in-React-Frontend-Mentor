@@ -2,22 +2,32 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center;
-	padding: 1.5em;
+	padding-top: 1.5em;
+	margin-bottom: 0.5em;
+	width: 100%;
+	max-width: 576px;
+	height: clamp(175px, 25vh, 35vh);
+}
+
+.header-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
 	height: clamp(200px, 30vh, 40vh);
 	width: 100vw;
 	background-image: url(../../images/bg-mobile-dark.jpg);
 	background-size: cover;
+	z-index: -1;
 }
 
 .heading {
 	text-transform: uppercase;
 	letter-spacing: 0.4em;
+	text-align: left;
 }
 
 @media (min-width: 768px) {
-	.header {
+	.header-bg {
 		background-image: url(../../images/bg-desktop-dark.jpg);
 	}
 }
-

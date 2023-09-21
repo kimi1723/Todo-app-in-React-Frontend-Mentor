@@ -1,0 +1,30 @@
+{
+    "sourceFile": "my-app/src/components/Todo/TodoListItem.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1695302630170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695302680196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import classes from './TodoListItem.module.css';\r\n \r\n-const TodoItem = ({ text }) => {\r\n+const TodoListItem = ({ text }) => {\r\n \treturn (\r\n \t\t<li className={classes.li}>\r\n \t\t\t<div className={classes['text-container']}>\r\n \t\t\t\t<input type=\"checkbox\" className={classes['checkbox']} />\r\n"
+                },
+                {
+                    "date": 1695304309560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import classes from './TodoListItem.module.css';\r\n+import Todo\r\n \r\n const TodoListItem = ({ text }) => {\r\n \treturn (\r\n \t\t<li className={classes.li}>\r\n@@ -20,5 +21,5 @@\n \t\t</li>\r\n \t);\r\n };\r\n \r\n-export default TodoItem;\r\n+export default TodoListItem;\r\n"
+                },
+                {
+                    "date": 1695304337658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import classes from './TodoListItem.module.css';\r\n-import TodoListMobileFooter from './TodoListMobileFooter';\r\n \r\n+\r\n const TodoListItem = ({ text }) => {\r\n \treturn (\r\n \t\t<li className={classes.li}>\r\n \t\t\t<div className={classes['text-container']}>\r\n"
+                }
+            ],
+            "date": 1695302630170,
+            "name": "Commit-0",
+            "content": "import classes from './TodoListItem.module.css';\r\n\r\nconst TodoItem = ({ text }) => {\r\n\treturn (\r\n\t\t<li className={classes.li}>\r\n\t\t\t<div className={classes['text-container']}>\r\n\t\t\t\t<input type=\"checkbox\" className={classes['checkbox']} />\r\n\t\t\t\t<div className={classes['gradient-bg']}></div>\r\n\t\t\t\t<p className={classes['todo-text']}>{text}</p>\r\n\t\t\t</div>\r\n\t\t\t<button type=\"button\" className={classes['cross-btn']}>\r\n\t\t\t\t<svg className={classes['cross-icon']} xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\">\r\n\t\t\t\t\t<path\r\n\t\t\t\t\t\tfill=\"#494C6B\"\r\n\t\t\t\t\t\tfill-rule=\"evenodd\"\r\n\t\t\t\t\t\td=\"M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z\"\r\n\t\t\t\t\t/>\r\n\t\t\t\t</svg>\r\n\t\t\t</button>\r\n\t\t</li>\r\n\t);\r\n};\r\n\r\nexport default TodoItem;\r\n"
+        }
+    ]
+}

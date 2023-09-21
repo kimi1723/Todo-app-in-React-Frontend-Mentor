@@ -1,6 +1,6 @@
-import classes from './TodoItem.module.css';
+import classes from './TodoListItem.module.css';
 
-const TodoItem = ({ text }) => {
+const TodoListItem = ({ text }) => {
 	return (
 		<li className={classes.li}>
 			<div className={classes['text-container']}>
@@ -21,4 +21,4 @@ const TodoItem = ({ text }) => {
 	);
 };
 
-export default TodoItem;
+export default TodoListItem;

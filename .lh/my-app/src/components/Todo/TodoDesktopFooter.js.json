@@ -1,0 +1,30 @@
+{
+    "sourceFile": "my-app/src/components/Todo/TodoDesktopFooter.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1695304492023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695304505036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n-{\r\n+const TodoDesktopFooter = () => {\r\n+    return <>\r\n+    {\r\n \t/* <p className={classes['items-left']}>5 items left</p>\r\n     <div className={classes['filter-buttons-container']}>\r\n         <button className={classes['filter-button']}>All</button>\r\n         <button className={classes['filter-button']}>Active</button>\r\n         <button className={classes['filter-button']}>Completed</button>\r\n     </div>\r\n     <button className={classes['filter-button']}>Clear Completed</button> */\r\n }\r\n+</>\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695304510242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n const TodoDesktopFooter = () => {\r\n     return <>\r\n \r\n-\t/* <p className={classes['items-left']}>5 items left</p>\r\n+\t <p className={classes['items-left']}>5 items left</p>\r\n     <div className={classes['filter-buttons-container']}>\r\n         <button className={classes['filter-button']}>All</button>\r\n         <button className={classes['filter-button']}>Active</button>\r\n         <button className={classes['filter-button']}>Completed</button>\r\n     </div>\r\n-    <button className={classes['filter-button']}>Clear Completed</button> */\r\n+    <button className={classes['filter-button']}>Clear Completed</button>\r\n \r\n </>\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695304523086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import classes from './TodoListFooter.module.css';\r\n \r\n const TodoDesktopFooter = () => {\r\n \treturn (\r\n \t\t<>\r\n"
+                }
+            ],
+            "date": 1695304492023,
+            "name": "Commit-0",
+            "content": "{\r\n\t/* <p className={classes['items-left']}>5 items left</p>\r\n    <div className={classes['filter-buttons-container']}>\r\n        <button className={classes['filter-button']}>All</button>\r\n        <button className={classes['filter-button']}>Active</button>\r\n        <button className={classes['filter-button']}>Completed</button>\r\n    </div>\r\n    <button className={classes['filter-button']}>Clear Completed</button> */\r\n}\r\n"
+        }
+    ]
+}
