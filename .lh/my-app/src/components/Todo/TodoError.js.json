@@ -1,0 +1,46 @@
+{
+    "sourceFile": "my-app/src/components/Todo/TodoError.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1695390861130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695390874273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import classes from './TodoError.module.css';\r\n \r\n const TodoError = () => {}\r\n \r\n export defualt TodoError\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695390886162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import classes from './TodoError.module.css';\r\n \r\n-const TodoError = () => {}\r\n+const TodoError = () => {\r\n+    return <div>Error</div>\r\n+}\r\n \r\n export defualt TodoError\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695390917579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn <div className={}>Error</div>;\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695390926102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn <div className={classes['error-div']}>Error</div>;\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695390934010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn <div className={classes['error-container']}></div>;\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695390941263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn <div className={classes['error-container']}>Todo</div>;\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695390951322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn <div className={classes['error-container']}>Please enter a todo </div>;\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                }
+            ],
+            "date": 1695390861130,
+            "name": "Commit-0",
+            "content": "\r\nconst TodoError = () => {}\r\n\r\nexport defualt TodoError"
+        }
+    ]
+}

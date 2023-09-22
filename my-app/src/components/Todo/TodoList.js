@@ -1,12 +1,13 @@
 import classes from './TodoList.module.css';
 
+import { useSelector } from 'react-redux';
 import TodoListItem from './TodoListItem';
 import TodoListFooter from './TodoListFooter';
 
 const TodoList = () => {
-	const DUMMY_LIST = ['Complete course', 'Jog around the park', '10 minutes meditation'];
+	const todosArray = useSelector(state => state.todos);
 
-	const todoItems = DUMMY_LIST.map(todo => <TodoListItem key={Math.random()} text={todo} />);
+	const todoItems = todosArray.map(todo => <TodoListItem key={todo.id} text={todo.title} />);
 
 	return (
 		<>
