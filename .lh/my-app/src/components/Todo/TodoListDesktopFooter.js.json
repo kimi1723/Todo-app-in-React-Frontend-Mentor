@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1695304563023,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695366722706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import classes from './TodoListFooter.module.css';\r\n \r\n-const TodoDesktopFooter = () => {\r\n+const TodoListDesktopFooter = () => {\r\n \treturn (\r\n \t\t<>\r\n \t\t\t<p className={classes['items-left']}>5 items left</p>\r\n \t\t\t<div className={classes['filter-buttons-container']}>\r\n"
+                },
+                {
+                    "date": 1695366960971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import classes from './TodoListFooter.module.css';\r\n+\r\n+const TodoListDesktopFooter = () => {\r\n+\treturn (\r\n+\t\t<footer>\r\n+\t\t\t<p className={classes['items-left']}>5 items left</p>\r\n+\t\t\t<div className={classes['filter-buttons-container']}>\r\n+\t\t\t\t<button className={classes['filter-button']}>All</button>\r\n+\t\t\t\t<button className={classes['filter-button']}>Active</button>\r\n+\t\t\t\t<button className={classes['filter-button']}>Completed</button>\r\n+\t\t\t</div>\r\n+\t\t\t<button className={classes['filter-button']}>Clear Completed</button>\r\n+\t\t</footer>\r\n+\t);\r\n+};\r\n+\r\n+export default TodoListDesktopFooter;\r\n"
+                },
+                {
+                    "date": 1695366967563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import classes from './TodoListFooter.module.css';\r\n \r\n const TodoListDesktopFooter = () => {\r\n \treturn (\r\n-\t\t<footer>\r\n+\t\t<footer className={classes.footer}>\r\n \t\t\t<p className={classes['items-left']}>5 items left</p>\r\n \t\t\t<div className={classes['filter-buttons-container']}>\r\n \t\t\t\t<button className={classes['filter-button']}>All</button>\r\n \t\t\t\t<button className={classes['filter-button']}>Active</button>\r\n"
                 }
             ],
             "date": 1695304563023,

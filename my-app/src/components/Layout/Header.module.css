@@ -24,9 +24,14 @@
 	text-transform: uppercase;
 	letter-spacing: 0.4em;
 	text-align: left;
+	text-shadow: 1px 1px 1px #000;
 }
 
 @media (min-width: 768px) {
+	.heading {
+		font-size: 3rem;
+	}
+
 	.header-bg {
 		background-image: url(../../images/bg-desktop-dark.jpg);
 	}

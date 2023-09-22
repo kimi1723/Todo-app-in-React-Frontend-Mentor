@@ -4,10 +4,7 @@
 	max-width: 576px;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
-}
-
-@media (min-height: 768px) {
-	.ul {
-		margin-top: -1.5em;
-	}
+	-webkit-box-shadow: 7px 27px 59px -3px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 7px 27px 59px -3px rgba(0, 0, 0, 1);
+	box-shadow: 7px 27px 59px -3px rgba(0, 0, 0, 1);
 }

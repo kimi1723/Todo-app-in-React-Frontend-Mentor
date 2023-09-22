@@ -131,6 +131,13 @@
 	}
 }
 
+@media (min-width: 768px) {
+	.li {
+		padding: 1.2em 1.5rem;
+		font-size: 1.1rem;
+	}
+}
+
 @media (min-width: 992px) {
 	.input-container {
 		max-width: 768px;
