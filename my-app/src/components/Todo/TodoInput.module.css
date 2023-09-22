@@ -1,4 +1,4 @@
-.input-container {
+.form {
 	display: flex;
 	align-items: center;
 	padding: 0.6em 1.5rem;
@@ -74,21 +74,21 @@
 	outline: none;
 }
 
-.input-container:has(.input:hover) .label,
-.input-container:has(.input:active) .label,
-.input-container:has(.input:focus) .label {
+.form:has(.input:hover) .label,
+.form:has(.input:active) .label,
+.form:has(.input:focus) .label {
 	border: 0.15em solid transparent;
 }
 
-.input-container:has(.input:hover) .label::after,
-.input-container:has(.input:active) .label::after,
-.input-container:has(.input:focus) .label::after {
+.form:has(.input:hover) .label::after,
+.form:has(.input:active) .label::after,
+.form:has(.input:focus) .label::after {
 	opacity: 1;
 	visibility: visible;
 }
 
 @media (min-width: 768px) {
-	.input-container {
+	.form {
 		padding: 0.4em 1.5em;
 	}
 
