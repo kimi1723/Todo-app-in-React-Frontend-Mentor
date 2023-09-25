@@ -107,7 +107,14 @@
 }
 
 .todo-text {
+	transition: color 0.5s;
 	cursor: pointer;
+}
+
+.completed {
+	text-decoration: line-through;
+	text-decoration-color: hsl(234, 39%, 85%);
+	color: hsl(233, 14%, 35%);
 }
 
 .cross-btn {

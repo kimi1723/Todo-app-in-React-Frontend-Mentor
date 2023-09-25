@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/store/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695627559589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695627567623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \t\t\tconst newTodo = action.payload;\r\n \r\n \t\t\tstate.todos.push({ title: newTodo, isCompleted: false, id: Math.random() });\r\n \t\t},\r\n-\t\th(state, action) {},\r\n+\t\thandleTodoCompletion(state, action) {},\r\n \t\tclearCompletedTodos(state, action) {},\r\n \t},\r\n });\r\n \r\n"
+                },
+                {
+                    "date": 1695627712497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import { configureStore, createSlice } from '@reduxjs/toolkit';\r\n+\r\n+const initialState = {\r\n+\ttodos: [\r\n+\t\t{ title: 'Complete course', isCompleted: false, id: 1 },\r\n+\t\t{ title: 'Complete course', isCompleted: false, id: 2 },\r\n+\t\t{ title: 'Complete course', isCompleted: false, id: 3 },\r\n+\t],\r\n+};\r\n+\r\n+const todosSlice = createSlice({\r\n+\tname: 'todos',\r\n+\tinitialState,\r\n+\treducers: {\r\n+\t\taddTodo(state, action) {\r\n+\t\t\tconst newTodo = action.payload;\r\n+\r\n+\t\t\tstate.todos.push({ title: newTodo, isCompleted: false, id: Math.random() });\r\n+\t\t},\r\n+\t\thandleTodoCompletion(state, action) {\r\n+\t\t\tconst \r\n+\t\t},\r\n+\t\tclearCompletedTodos(state, action) {},\r\n+\t},\r\n+});\r\n+\r\n+const store = configureStore({ reducer: todosSlice.reducer });\r\n+\r\n+export const todosActions = todosSlice.actions;\r\n+\r\n+export default store;\r\n"
+                }
+            ],
+            "date": 1695627559589,
+            "name": "Commit-0",
+            "content": "import { configureStore, createSlice } from '@reduxjs/toolkit';\r\n\r\nconst initialState = {\r\n\ttodos: [\r\n\t\t{ title: 'Complete course', isCompleted: false, id: 1 },\r\n\t\t{ title: 'Complete course', isCompleted: false, id: 2 },\r\n\t\t{ title: 'Complete course', isCompleted: false, id: 3 },\r\n\t],\r\n};\r\n\r\nconst todosSlice = createSlice({\r\n\tname: 'todos',\r\n\tinitialState,\r\n\treducers: {\r\n\t\taddTodo(state, action) {\r\n\t\t\tconst newTodo = action.payload;\r\n\r\n\t\t\tstate.todos.push({ title: newTodo, isCompleted: false, id: Math.random() });\r\n\t\t},\r\n\t\thandle(state, action) {},\r\n\t\tclearCompletedTodos(state, action) {},\r\n\t},\r\n});\r\n\r\nconst store = configureStore({ reducer: todosSlice.reducer });\r\n\r\nexport const todosActions = todosSlice.actions;\r\n\r\nexport default store;\r\n"
+        }
+    ]
+}

@@ -17,7 +17,12 @@ const todosSlice = createSlice({
 
 			state.todos.push({ title: newTodo, isCompleted: false, id: Math.random() });
 		},
-		completeTodo(state, action) {},
+		handleTodoCompletion(state, action) {
+			const todoId = action.payload;
+			const todo = state.todos.find(todo => todo.id === todoId);
+
+			todo.isCompleted = !todo.isCompleted;
+		},
 		clearCompletedTodos(state, action) {},
 	},
 });

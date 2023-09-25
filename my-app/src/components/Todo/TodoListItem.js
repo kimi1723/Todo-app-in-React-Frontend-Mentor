@@ -1,12 +1,26 @@
 import classes from './TodoListItem.module.css';
 
-const TodoListItem = ({ text }) => {
+import { useDispatch, useSelector } from 'react-redux';
+import { todosActions } from '../../store';
+
+const TodoListItem = ({ text, id }) => {
+	const dispatch = useDispatch();
+	const isCompleted = useSelector(state => state.todos.find(todo => todo.id === id).isCompleted);
+
+	const todoCompletionHandler = e => {
+		dispatch(todosActions.handleTodoCompletion(id));
+	};
+
+	const todoAdditionalClasses = isCompleted ? 'completed' : '';
+
 	return (
 		<li className={classes.li}>
 			<div className={classes['text-container']}>
-				<input type="checkbox" className={classes['checkbox']} />
+				<input type="checkbox" className={classes['checkbox']} onChange={todoCompletionHandler} checked={isCompleted} />
 				<div className={classes['gradient-bg']}></div>
-				<p className={classes['todo-text']}>{text}</p>
+				<p className={`${classes['todo-text']} ${classes[todoAdditionalClasses]}`} onClick={todoCompletionHandler}>
+					{text}
+				</p>
 			</div>
 			<button type="button" className={classes['cross-btn']}>
 				<svg className={classes['cross-icon']} xmlns="http://www.w3.org/2000/svg" width="18" height="18">

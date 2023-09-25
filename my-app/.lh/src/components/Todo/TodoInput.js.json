@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Todo/TodoInput.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1695627812731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1695627812731,
+            "name": "Commit-0",
+            "content": "import classes from './TodoInput.module.css';\r\n\r\nimport { useState, useEffect } from 'react';\r\nimport { useDispatch } from 'react-redux';\r\nimport { todosActions } from '../../store';\r\n\r\nimport TodoError from './TodoError';\r\n\r\nconst TodoInput = () => {\r\n\tconst dispatch = useDispatch();\r\n\tconst [inputValue, setInputValue] = useState('');\r\n\tconst [isEmpty, setIsEmpty] = useState(true);\r\n\tconst [isTouched, setIsTouched] = useState(false);\r\n\r\n\tconst onChangeHandler = e => {\r\n\t\tsetInputValue(e.target.value);\r\n\t\tsetIsTouched(true);\r\n\t\te.target.value === '' ? setIsEmpty(true) : setIsEmpty(false);\r\n\t};\r\n\r\n\tconst addTodoHandler = e => {\r\n\t\te.preventDefault();\r\n\r\n\t\tconst enteredTodo = inputValue;\r\n\r\n\t\tif (enteredTodo === '') {\r\n\t\t\tsetIsEmpty(true);\r\n\t\t\tsetIsTouched(true);\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tdispatch(todosActions.addTodo(enteredTodo));\r\n\r\n\t\tsetInputValue('');\r\n\t\tsetIsTouched(false);\r\n\t};\r\n\r\n\treturn (\r\n\t\t<form className={classes.form} onSubmit={addTodoHandler}>\r\n\t\t\t{isEmpty && isTouched && <TodoError />}\r\n\t\t\t<label htmlFor=\"todo-input\" className={classes.label}></label>\r\n\t\t\t<input\r\n\t\t\t\ttype=\"text\"\r\n\t\t\t\tid=\"todo-input\"\r\n\t\t\t\tplaceholder=\"Create a new todo...\"\r\n\t\t\t\tclassName={classes[`input`]}\r\n\t\t\t\tvalue={inputValue}\r\n\t\t\t\tonChange={onChangeHandler}\r\n\t\t\t/>\r\n\t\t</form>\r\n\t);\r\n};\r\n\r\nexport default TodoInput;\r\n"
+        }
+    ]
+}

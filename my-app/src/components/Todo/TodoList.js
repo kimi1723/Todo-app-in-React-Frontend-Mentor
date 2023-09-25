@@ -7,7 +7,7 @@ import TodoListFooter from './TodoListFooter';
 const TodoList = () => {
 	const todosArray = useSelector(state => state.todos);
 
-	const todoItems = todosArray.map(todo => <TodoListItem key={todo.id} text={todo.title} />);
+	const todoItems = todosArray.map(todo => <TodoListItem key={todo.id} id={todo.id} text={todo.title} />);
 
 	return (
 		<>

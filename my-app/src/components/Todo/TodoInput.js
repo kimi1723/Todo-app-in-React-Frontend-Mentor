@@ -7,8 +7,8 @@ import { todosActions } from '../../store';
 import TodoError from './TodoError';
 
 const TodoInput = () => {
-	const [inputValue, setInputValue] = useState('');
 	const dispatch = useDispatch();
+	const [inputValue, setInputValue] = useState('');
 	const [isEmpty, setIsEmpty] = useState(true);
 	const [isTouched, setIsTouched] = useState(false);
 

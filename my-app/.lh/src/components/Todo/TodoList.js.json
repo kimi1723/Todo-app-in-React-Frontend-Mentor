@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Todo/TodoList.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1695627625560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1695627625560,
+            "name": "Commit-0",
+            "content": "import classes from './TodoList.module.css';\r\n\r\nimport { useSelector } from 'react-redux';\r\nimport TodoListItem from './TodoListItem';\r\nimport TodoListFooter from './TodoListFooter';\r\n\r\nconst TodoList = () => {\r\n\tconst todosArray = useSelector(state => state.todos);\r\n\r\n\tconst todoItems = todosArray.map(todo => <TodoListItem key={todo.id} id={todo.id} text={todo.title} />);\r\n\r\n\treturn (\r\n\t\t<>\r\n\t\t\t<ul className={classes.ul}>{todoItems}</ul>\r\n\t\t\t<TodoListFooter />\r\n\t\t</>\r\n\t);\r\n};\r\n\r\nexport default TodoList;\r\n"
+        }
+    ]
+}
