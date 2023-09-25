@@ -1,10 +1,10 @@
 import classes from './TodoListFooter.module.css';
 
-const TodoListMobileFooter = () => {
+const TodoListMobileFooter = ({ itemsLeftCount }) => {
 	return (
 		<>
 			<footer className={classes.footer}>
-				<p className={classes['items-left']}>5 items left</p>
+				<p className={classes['items-left']}>{itemsLeftCount} items left</p>
 				<button className={classes['filter-button']}>Clear Completed</button>
 			</footer>
 			<div className={classes['filter-buttons-container']}>

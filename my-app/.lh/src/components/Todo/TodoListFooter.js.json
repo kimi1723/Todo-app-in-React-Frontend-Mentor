@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/components/Todo/TodoListFooter.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1695632285952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695632291213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\r\n+import classes from './TodoListFooter.module.css';\r\n import { useState, useEffect } from 'react';\r\n \r\n import TodoListMobileFooter from './TodoListMobileFooter';\r\n import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n"
+                },
+                {
+                    "date": 1695632306489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import classes from './TodoListFooter.module.css';\r\n+\r\n import { useState, useEffect } from 'react';\r\n \r\n import TodoListMobileFooter from './TodoListMobileFooter';\r\n import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n"
+                },
+                {
+                    "date": 1695632319463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n \r\n import TodoListMobileFooter from './TodoListMobileFooter';\r\n import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n \r\n+import { useSelector } from 'react-redux';\r\n+\r\n const TodoListFooter = () => {\r\n \tconst [width, setWidth] = useState(window.innerWidth);\r\n \tconst widthDesktopBreakpoint = 576;\r\n \tconst isMobile = width < widthDesktopBreakpoint;\r\n"
+                },
+                {
+                    "date": 1695632333603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import { useState, useEffect } from 'react';\r\n+import { useSelector } from 'react-redux';\r\n+\r\n+import TodoListMobileFooter from './TodoListMobileFooter';\r\n+import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n+\r\n+const TodoListFooter = () => {\r\n+\tconst \r\n+\tconst [width, setWidth] = useState(window.innerWidth);\r\n+\tconst widthDesktopBreakpoint = 576;\r\n+\tconst isMobile = width < widthDesktopBreakpoint;\r\n+\r\n+\tuseEffect(() => {\r\n+\t\twindow.addEventListener('resize', resizeHandler);\r\n+\t}, []);\r\n+\r\n+\tconst resizeHandler = () => {\r\n+\t\tsetWidth(window.innerWidth);\r\n+\t};\r\n+\r\n+\treturn <>{isMobile ? <TodoListMobileFooter /> : <TodoListDesktopFooter />}</>;\r\n+};\r\n+\r\n+export default TodoListFooter;\r\n"
+                },
+                {
+                    "date": 1695632338872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import { useState, useEffect } from 'react';\r\n+import { useSelector } from 'react-redux';\r\n+\r\n+import TodoListMobileFooter from './TodoListMobileFooter';\r\n+import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n+\r\n+const TodoListFooter = () => {\r\n+\tconst items\r\n+\tconst [width, setWidth] = useState(window.innerWidth);\r\n+\tconst widthDesktopBreakpoint = 576;\r\n+\tconst isMobile = width < widthDesktopBreakpoint;\r\n+\r\n+\tuseEffect(() => {\r\n+\t\twindow.addEventListener('resize', resizeHandler);\r\n+\t}, []);\r\n+\r\n+\tconst resizeHandler = () => {\r\n+\t\tsetWidth(window.innerWidth);\r\n+\t};\r\n+\r\n+\treturn <>{isMobile ? <TodoListMobileFooter /> : <TodoListDesktopFooter />}</>;\r\n+};\r\n+\r\n+export default TodoListFooter;\r\n"
+                },
+                {
+                    "date": 1695632372964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import { useState, useEffect } from 'react';\r\n+import { useSelector } from 'react-redux';\r\n+\r\n+import TodoListMobileFooter from './TodoListMobileFooter';\r\n+import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n+\r\n+const TodoListFooter = () => {\r\n+\tconst itemsCount = \r\n+\tconst [width, setWidth] = useState(window.innerWidth);\r\n+\tconst widthDesktopBreakpoint = 576;\r\n+\tconst isMobile = width < widthDesktopBreakpoint;\r\n+\r\n+\tuseEffect(() => {\r\n+\t\twindow.addEventListener('resize', resizeHandler);\r\n+\t}, []);\r\n+\r\n+\tconst resizeHandler = () => {\r\n+\t\tsetWidth(window.innerWidth);\r\n+\t};\r\n+\r\n+\treturn <>{isMobile ? <TodoListMobileFooter /> : <TodoListDesktopFooter />}</>;\r\n+};\r\n+\r\n+export default TodoListFooter;\r\n"
+                },
+                {
+                    "date": 1695632423103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import { useState, useEffect } from 'react';\r\n+import { useSelector } from 'react-redux';\r\n+\r\n+import TodoListMobileFooter from './TodoListMobileFooter';\r\n+import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n+\r\n+const TodoListFooter = () => {\r\n+\tconst itemsCount = useSelector(state => state.todos.)\r\n+\tconst [width, setWidth] = useState(window.innerWidth);\r\n+\tconst widthDesktopBreakpoint = 576;\r\n+\tconst isMobile = width < widthDesktopBreakpoint;\r\n+\r\n+\tuseEffect(() => {\r\n+\t\twindow.addEventListener('resize', resizeHandler);\r\n+\t}, []);\r\n+\r\n+\tconst resizeHandler = () => {\r\n+\t\tsetWidth(window.innerWidth);\r\n+\t};\r\n+\r\n+\treturn <>{isMobile ? <TodoListMobileFooter /> : <TodoListDesktopFooter />}</>;\r\n+};\r\n+\r\n+export default TodoListFooter;\r\n"
+                },
+                {
+                    "date": 1695632434798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n import TodoListMobileFooter from './TodoListMobileFooter';\r\n import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n \r\n const TodoListFooter = () => {\r\n-\tconst itemsCount = useSelector(state => state.todos.)\r\n+\tconst itemsCount = useSelector(state => state.todos)\r\n+\tconsole.log(itemsCount);\r\n \tconst [width, setWidth] = useState(window.innerWidth);\r\n \tconst widthDesktopBreakpoint = 576;\r\n \tconst isMobile = width < widthDesktopBreakpoint;\r\n \r\n"
+                },
+                {
+                    "date": 1695632451713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import TodoListMobileFooter from './TodoListMobileFooter';\r\n import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n \r\n const TodoListFooter = () => {\r\n-\tconst itemsCount = useSelector(state => state.todos);\r\n+\tconst itemsCount = useSelector(state => state.todos.length);\r\n \tconsole.log(itemsCount);\r\n \tconst [width, setWidth] = useState(window.innerWidth);\r\n \tconst widthDesktopBreakpoint = 576;\r\n \tconst isMobile = width < widthDesktopBreakpoint;\r\n"
+                },
+                {
+                    "date": 1695632462823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import TodoListDesktopFooter from './TodoListDesktopFooter';\r\n \r\n const TodoListFooter = () => {\r\n \tconst itemsCount = useSelector(state => state.todos.length);\r\n-\tconsole.log(itemsCount);\r\n+\r\n \tconst [width, setWidth] = useState(window.innerWidth);\r\n \tconst widthDesktopBreakpoint = 576;\r\n \tconst isMobile = width < widthDesktopBreakpoint;\r\n \r\n"
+                }
+            ],
+            "date": 1695632285952,
+            "name": "Commit-0",
+            "content": "\r\nimport { useState, useEffect } from 'react';\r\n\r\nimport TodoListMobileFooter from './TodoListMobileFooter';\r\nimport TodoListDesktopFooter from './TodoListDesktopFooter';\r\n\r\nconst TodoListFooter = () => {\r\n\tconst [width, setWidth] = useState(window.innerWidth);\r\n\tconst widthDesktopBreakpoint = 576;\r\n\tconst isMobile = width < widthDesktopBreakpoint;\r\n\r\n\tuseEffect(() => {\r\n\t\twindow.addEventListener('resize', resizeHandler);\r\n\t}, []);\r\n\r\n\tconst resizeHandler = () => {\r\n\t\tsetWidth(window.innerWidth);\r\n\t};\r\n\r\n\treturn <>{isMobile ? <TodoListMobileFooter /> : <TodoListDesktopFooter />}</>;\r\n};\r\n\r\nexport default TodoListFooter;\r\n"
+        }
+    ]
+}
