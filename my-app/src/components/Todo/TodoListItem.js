@@ -23,8 +23,8 @@ const TodoListItem = ({ text, id, dragStartHandler, index, dragEnterHandler, dro
 		<li
 			className={classes.li}
 			draggable
-			onDragStart={e => dragStartHandler(e, index)}
-			onDragEnter={e => dragEnterHandler(e, index)}
+			onDragStart={() => dragStartHandler(index)}
+			onDragEnter={() => dragEnterHandler(index)}
 			onDragEnd={dropHandler}>
 			<div className={classes['text-container']}>
 				<input type="checkbox" className={classes['checkbox']} onChange={todoCompletionHandler} checked={isCompleted} />
@@ -33,6 +33,7 @@ const TodoListItem = ({ text, id, dragStartHandler, index, dragEnterHandler, dro
 					{text}
 				</p>
 			</div>
+
 			<button type="button" className={classes['cross-btn']} onClick={deleteTodoHandler}>
 				<svg className={classes['cross-icon']} xmlns="http://www.w3.org/2000/svg" width="18" height="18">
 					<path

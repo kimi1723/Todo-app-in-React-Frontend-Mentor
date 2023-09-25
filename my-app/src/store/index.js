@@ -55,6 +55,9 @@ const todosSlice = createSlice({
 
 			state.todos = newState;
 		},
+		rearrangeTodos(state, action) {
+			state.todos = action.payload;
+		},
 	},
 });
 

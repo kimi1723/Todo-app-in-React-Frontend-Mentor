@@ -1,38 +1,36 @@
 import classes from './TodoList.module.css';
 
-import { useSelector } from 'react-redux';
-import { useRef, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useRef } from 'react';
 
 import TodoListItem from './TodoListItem';
 import TodoListFooter from './TodoListFooter';
+import { todosActions } from '../../store';
 
 const TodoList = () => {
 	const dragItem = useRef();
 	const dragOverItem = useRef();
-	// const todosArray = useSelector(state => state.todos);
-	const [todosArray, setTodosArray] = useState([
-		{ title: 'Complete course1', isCompleted: false, id: 1, isVisible: true },
-		{ title: 'Complete course2', isCompleted: false, id: 2, isVisible: true },
-		{ title: 'Complete course3', isCompleted: false, id: 3, isVisible: true },
-		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
-	]);
+	const todosArray = useSelector(state => state.todos);
+	const dispatch = useDispatch();
 
-	const dragStartHandler = (e, position) => {
+	const dragStartHandler = position => {
 		dragItem.current = position;
 	};
 
-	const dragEnterHandler = (e, position) => {
+	const dragEnterHandler = position => {
 		dragOverItem.current = position;
 	};
 
 	const dropHandler = e => {
 		const copiedTodosArray = [...todosArray];
 		const dragItemContent = copiedTodosArray[dragItem.current];
+
 		copiedTodosArray.splice(dragItem.current, 1);
 		copiedTodosArray.splice(dragOverItem.current, 0, dragItemContent);
 		dragItem.current = null;
 		dragOverItem.current = null;
-		setTodosArray(copiedTodosArray);
+
+		dispatch(todosActions.rearrangeTodos(copiedTodosArray));
 	};
 
 	const todoItems = todosArray
