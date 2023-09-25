@@ -7,8 +7,6 @@ import { todosActions } from '../../store';
 import TodoListMobileFooter from './TodoListMobileFooter';
 import TodoListDesktopFooter from './TodoListDesktopFooter';
 
-// let activeFilter = 'all';
-
 const TodoListFooter = () => {
 	const itemsLeftCount = useSelector(state => state.todos.filter(todo => todo.isCompleted === false).length);
 	const dispatch = useDispatch();

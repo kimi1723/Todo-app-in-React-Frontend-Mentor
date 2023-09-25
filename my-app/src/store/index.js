@@ -35,7 +35,6 @@ const todosSlice = createSlice({
 			const filter = action.payload;
 
 			state.filter = filter;
-			console.log(filter);
 
 			switch (filter) {
 				case 'all':

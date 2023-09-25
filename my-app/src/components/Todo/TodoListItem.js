@@ -3,7 +3,7 @@ import classes from './TodoListItem.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { todosActions } from '../../store';
 
-const TodoListItem = ({ text, id }) => {
+const TodoListItem = ({ text, id, dragStartHandler, index, dragEnterHandler, dropHandler }) => {
 	const dispatch = useDispatch();
 	const isCompleted = useSelector(state => state.todos.find(todo => todo.id === id).isCompleted);
 	const filter = useSelector(state => state.filter);
@@ -20,7 +20,12 @@ const TodoListItem = ({ text, id }) => {
 	const todoAdditionalClasses = isCompleted ? 'completed' : '';
 
 	return (
-		<li className={classes.li}>
+		<li
+			className={classes.li}
+			draggable
+			onDragStart={e => dragStartHandler(e, index)}
+			onDragEnter={e => dragEnterHandler(e, index)}
+			onDragEnd={dropHandler}>
 			<div className={classes['text-container']}>
 				<input type="checkbox" className={classes['checkbox']} onChange={todoCompletionHandler} checked={isCompleted} />
 				<div className={classes['gradient-bg']}></div>
