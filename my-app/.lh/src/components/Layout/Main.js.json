@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/Layout/Main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1695648941099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695649007801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import classes from './Main.module.css';\r\n import TodoList from '../Todo/TodoList';\r\n \r\n const Main = () => {\r\n-\tconsole.log('main');\r\n \treturn (\r\n \t\t<main className={classes.main}>\r\n \t\t\t<TodoList />\r\n \t\t</main>\r\n"
+                }
+            ],
+            "date": 1695648941099,
+            "name": "Commit-0",
+            "content": "import classes from \"./Main.module.css\";\r\nimport TodoList from \"../Todo/TodoList\";\r\n\r\nconst Main = () => {\r\n  console.log('main');\r\n  return (\r\n    <main className={classes.main}>\r\n      <TodoList />\r\n    </main>\r\n  );\r\n};\r\n\r\nexport default Main;\r\n"
+        }
+    ]
+}

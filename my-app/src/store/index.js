@@ -47,10 +47,14 @@ const todosSlice = createSlice({
 					state.todos.filter(todo => (todo.isVisible = todo.isCompleted));
 					break;
 				default:
-					console.log('Error');
+					console.log('Error filtering todos');
 			}
 		},
-		clearCompletedTodos(state, action) {},
+		clearCompletedTodos(state) {
+			const newState = state.todos.filter(todo => todo.isCompleted === false);
+
+			state.todos = newState;
+		},
 	},
 });
 

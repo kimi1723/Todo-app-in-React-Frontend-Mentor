@@ -1,8 +1,12 @@
 import classes from './TodoListFooter.module.css';
 
-const TodoListDesktopFooter = ({ itemsLeftCount, filterHandler, filterClasses }) => {
+const TodoListDesktopFooter = ({ itemsLeftCount, filterHandler, filterClasses, clearCompletedHandler }) => {
 	const filterHandlerLift = (filter, event) => {
 		filterHandler(filter, event);
+	};
+
+	const clearCompletedHandlerLift = () => {
+		clearCompletedHandler();
 	};
 
 	return (
@@ -19,7 +23,9 @@ const TodoListDesktopFooter = ({ itemsLeftCount, filterHandler, filterClasses })
 					Completed
 				</button>
 			</div>
-			<button className={classes['filter-button']}>Clear Completed</button>
+			<button className={classes['filter-button']} onClick={clearCompletedHandlerLift}>
+				Clear Completed
+			</button>
 		</footer>
 	);
 };

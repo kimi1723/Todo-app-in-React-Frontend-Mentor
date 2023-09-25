@@ -32,6 +32,10 @@ const TodoListFooter = () => {
 		event.target.blur();
 	};
 
+	const clearCompletedHandler = () => {
+		dispatch(todosActions.clearCompletedTodos());
+	};
+
 	const filterClasses = {
 		allClasses: classes['filter-button'],
 		activeClasses: classes['filter-button'],
@@ -49,7 +53,7 @@ const TodoListFooter = () => {
 			filterClasses.completedClasses = `${classes['filter-button']} ${classes.active}`;
 			break;
 		default:
-			console.log('error');
+			console.log('Error filtering classes for filtering buttons');
 	}
 
 	return (
@@ -58,15 +62,15 @@ const TodoListFooter = () => {
 				<TodoListMobileFooter
 					itemsLeftCount={itemsLeftCount}
 					filterHandler={filterHandler}
-					activeFilter={activeFilter}
 					filterClasses={filterClasses}
+					clearCompletedHandler={clearCompletedHandler}
 				/>
 			) : (
 				<TodoListDesktopFooter
 					itemsLeftCount={itemsLeftCount}
 					filterHandler={filterHandler}
-					activeFilter={activeFilter}
 					filterClasses={filterClasses}
+					clearCompletedHandler={clearCompletedHandler}
 				/>
 			)}
 		</>
