@@ -2,9 +2,10 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
 	todos: [
-		{ title: 'Complete course', isCompleted: false, id: 1 },
-		{ title: 'Complete course', isCompleted: false, id: 2 },
-		{ title: 'Complete course', isCompleted: false, id: 3 },
+		{ title: 'Complete course1', isCompleted: false, id: 1, isVisible: true },
+		{ title: 'Complete course2', isCompleted: false, id: 2, isVisible: true },
+		{ title: 'Complete course3', isCompleted: false, id: 3, isVisible: true },
+		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
 	],
 };
 
@@ -15,7 +16,7 @@ const todosSlice = createSlice({
 		addTodo(state, action) {
 			const newTodo = action.payload;
 
-			state.todos.push({ title: newTodo, isCompleted: false, id: Math.random() });
+			state.todos.push({ title: newTodo, isCompleted: false, id: Math.random(), isVisible: true });
 		},
 		handleTodoCompletion(state, action) {
 			const todoId = action.payload;
@@ -28,6 +29,23 @@ const todosSlice = createSlice({
 			const todoIndex = state.todos.findIndex(todo => todo.id === todoId);
 
 			state.todos.splice(todoIndex, 1);
+		},
+		filterTodos(state, action) {
+			const filter = action.payload;
+
+			switch (filter) {
+				case 'all':
+					state.todos.forEach(todo => (todo.isVisible = true));
+					break;
+				case 'active':
+					state.todos.filter(todo => (todo.isVisible = !todo.isCompleted));
+					break;
+				case 'completed':
+					state.todos.filter(todo => (todo.isVisible = todo.isCompleted));
+					break;
+				default:
+					console.log('Error');
+			}
 		},
 		clearCompletedTodos(state, action) {},
 	},

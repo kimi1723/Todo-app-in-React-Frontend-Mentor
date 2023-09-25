@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Todo/TodoListFooter.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695643036917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695643084143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,10 +40,9 @@\n \ttransition: color 0.3s;\r\n \tcursor: pointer;\r\n \r\n \t&:hover,\r\n-\t&:focus,\r\n-\t&:active {\r\n+\t&:focus {\r\n \t\tcolor: hsl(234, 39%, 85%);\r\n \t\t/* color: hsl(220, 98%, 61%); */\r\n \t}\r\n }\r\n"
+                },
+                {
+                    "date": 1695643112993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,67 @@\n+.footer {\r\n+\tdisplay: flex;\r\n+\tjustify-content: space-between;\r\n+\tpadding: 1.5em;\r\n+\twidth: 100%;\r\n+\tmax-width: 576px;\r\n+\tfont-size: 1rem;\r\n+\tbackground-color: hsl(235, 24%, 19%);\r\n+\tborder-bottom-left-radius: 8px;\r\n+\tborder-bottom-right-radius: 8px;\r\n+\t-webkit-box-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n+\t-moz-box-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n+\tbox-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n+}\r\n+\r\n+.items-left {\r\n+\tcolor: hsl(234, 11%, 52%);\r\n+}\r\n+\r\n+.filter-buttons-container {\r\n+\tdisplay: flex;\r\n+\tjustify-content: space-between;\r\n+\tmargin-top: 1em;\r\n+\tpadding: 1em 4em;\r\n+\twidth: 100%;\r\n+\tmax-width: 576px;\r\n+\tbackground-color: hsl(235, 24%, 19%);\r\n+\tborder-radius: 8px;\r\n+\t-webkit-box-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n+\t-moz-box-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n+\tbox-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n+}\r\n+\r\n+.filter-button {\r\n+\tfont-size: 1rem;\r\n+\tbackground: none;\r\n+\toutline: none;\r\n+\tborder: none;\r\n+\tcolor: hsl(234, 11%, 52%);\r\n+\ttransition: color 0.3s;\r\n+\tcursor: pointer;\r\n+\r\n+\t&:hover,\r\n+\t&:focus {\r\n+\t\tcolor: hsl(234, 39%, 85%);\r\n+\t\t/* color: hsl(220, 98%, 61%); */\r\n+\t}\r\n+}\r\n+\r\n+.active {\r\n+\t\r\n+}\r\n+\r\n+@media (min-width: 576px) {\r\n+\t.footer {\r\n+\t\talign-items: center;\r\n+\t}\r\n+\r\n+\t.filter-buttons-container {\r\n+\t\tmargin: 0;\r\n+\t\tpadding: 0;\r\n+\t\twidth: 175px;\r\n+\t\t-webkit-box-shadow: none;\r\n+\t\t-moz-box-shadow: none;\r\n+\t\tbox-shadow: none;\r\n+\t}\r\n+}\r\n"
+                }
+            ],
+            "date": 1695643036917,
+            "name": "Commit-0",
+            "content": ".footer {\r\n\tdisplay: flex;\r\n\tjustify-content: space-between;\r\n\tpadding: 1.5em;\r\n\twidth: 100%;\r\n\tmax-width: 576px;\r\n\tfont-size: 1rem;\r\n\tbackground-color: hsl(235, 24%, 19%);\r\n\tborder-bottom-left-radius: 8px;\r\n\tborder-bottom-right-radius: 8px;\r\n\t-webkit-box-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n\t-moz-box-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n\tbox-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n}\r\n\r\n.items-left {\r\n\tcolor: hsl(234, 11%, 52%);\r\n}\r\n\r\n.filter-buttons-container {\r\n\tdisplay: flex;\r\n\tjustify-content: space-between;\r\n\tmargin-top: 1em;\r\n\tpadding: 1em 4em;\r\n\twidth: 100%;\r\n\tmax-width: 576px;\r\n\tbackground-color: hsl(235, 24%, 19%);\r\n\tborder-radius: 8px;\r\n\t-webkit-box-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n\t-moz-box-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n\tbox-shadow: 10px 33px 53px -16px rgba(0, 0, 0, 1);\r\n}\r\n\r\n.filter-button {\r\n\tfont-size: 1rem;\r\n\tbackground: none;\r\n\toutline: none;\r\n\tborder: none;\r\n\tcolor: hsl(234, 11%, 52%);\r\n\ttransition: color 0.3s;\r\n\tcursor: pointer;\r\n\r\n\t&:hover,\r\n\t&:focus,\r\n\t&:active {\r\n\t\thsl(234, 39%, 85%)\r\n\t\t/* color: hsl(220, 98%, 61%); */\r\n\t}\r\n}\r\n\r\n@media (min-width: 576px) {\r\n\t.footer {\r\n\t\talign-items: center;\r\n\t}\r\n\r\n\t.filter-buttons-container {\r\n\t\tmargin: 0;\r\n\t\tpadding: 0;\r\n\t\twidth: 175px;\r\n\t\t-webkit-box-shadow: none;\r\n\t\t-moz-box-shadow: none;\r\n\t\tbox-shadow: none;\r\n\t}\r\n}\r\n"
+        }
+    ]
+}

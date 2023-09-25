@@ -1,6 +1,6 @@
 import classes from './TodoInput.module.css';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { todosActions } from '../../store';
 

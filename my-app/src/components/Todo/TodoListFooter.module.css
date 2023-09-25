@@ -41,10 +41,13 @@
 	cursor: pointer;
 
 	&:hover,
-	&:focus,
-	&:active {
-		color: hsl(220, 98%, 61%);
+	&:focus {
+		color: hsl(234, 39%, 85%);
 	}
+}
+
+.active {
+	color: hsl(220, 98%, 61%);
 }
 
 @media (min-width: 576px) {

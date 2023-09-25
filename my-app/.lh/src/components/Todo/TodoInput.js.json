@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1695627812731,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695642993696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import classes from './TodoInput.module.css';\r\n \r\n-import { useState, useEffect } from 'react';\r\n+import { useState } from 'react';\r\n import { useDispatch } from 'react-redux';\r\n import { todosActions } from '../../store';\r\n \r\n import TodoError from './TodoError';\r\n"
                 }
             ],
             "date": 1695627812731,

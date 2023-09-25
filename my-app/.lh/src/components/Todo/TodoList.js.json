@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1695627625560,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695644573307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n const TodoList = () => {\r\n \tconst todosArray = useSelector(state => state.todos);\r\n \r\n \tconst todoItems = todosArray.map(todo => <TodoListItem key={todo.id} id={todo.id} text={todo.title} />);\r\n+\tconst todoItems2 = todosArray\r\n \r\n \treturn (\r\n \t\t<>\r\n \t\t\t<ul className={classes.ul}>{todoItems}</ul>\r\n"
+                },
+                {
+                    "date": 1695644598971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import classes from './TodoList.module.css';\r\n+\r\n+import { useSelector } from 'react-redux';\r\n+import TodoListItem from './TodoListItem';\r\n+import TodoListFooter from './TodoListFooter';\r\n+\r\n+const TodoList = () => {\r\n+\tconst todosArray = useSelector(state => state.todos);\r\n+\r\n+\tconst todoItems = todosArray.map(todo => <TodoListItem key={todo.id} id={todo.id} text={todo.title} />);\r\n+\tconst todoItems2 = todosArray.filter(todo => todo.)\r\n+\r\n+\treturn (\r\n+\t\t<>\r\n+\t\t\t<ul className={classes.ul}>{todoItems}</ul>\r\n+\t\t\t<TodoListFooter />\r\n+\t\t</>\r\n+\t);\r\n+};\r\n+\r\n+export default TodoList;\r\n"
+                },
+                {
+                    "date": 1695644605369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n const TodoList = () => {\r\n \tconst todosArray = useSelector(state => state.todos);\r\n \r\n \tconst todoItems = todosArray.map(todo => <TodoListItem key={todo.id} id={todo.id} text={todo.title} />);\r\n-\tconst todoItems2 = todosArray.filter(todo => todo.isVisible ==)\r\n+\tconst todoItems2 = todosArray.filter(todo => todo.isVisible === true);\r\n+\tconsole.log(todoItems22);\r\n \r\n \treturn (\r\n \t\t<>\r\n \t\t\t<ul className={classes.ul}>{todoItems}</ul>\r\n"
+                },
+                {
+                    "date": 1695644633244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import classes from './TodoList.module.css';\r\n+\r\n+import { useSelector } from 'react-redux';\r\n+import TodoListItem from './TodoListItem';\r\n+import TodoListFooter from './TodoListFooter';\r\n+\r\n+const TodoList = () => {\r\n+\tconst todosArray = useSelector(state => state.todos);\r\n+\tconst filteredItems = todosArray.filter(todo => todo.isVisible === true);\r\n+\r\n+\tconst todoItems = todosArray.map(todo => <TodoListItem key={todo.id} id={todo.id} text={todo.title} />);\r\n+\tconsole.log(todoItems2);\r\n+\r\n+\treturn (\r\n+\t\t<>\r\n+\t\t\t<ul className={classes.ul}>{todoItems}</ul>\r\n+\t\t\t<TodoListFooter />\r\n+\t\t</>\r\n+\t);\r\n+};\r\n+\r\n+export default TodoList;\r\n"
                 }
             ],
             "date": 1695627625560,

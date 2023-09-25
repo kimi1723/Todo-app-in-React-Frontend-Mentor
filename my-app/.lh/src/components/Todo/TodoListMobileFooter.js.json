@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1695632512843,
@@ -12,6 +12,10 @@
                 {
                     "date": 1695633881560,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import classes from './TodoListFooter.module.css';\r\n \r\n-const TodoListMobileFooter = ({ itemsCount }) => {\r\n+const TodoListMobileFooter = ({ itemsLeftCount }) => {\r\n \treturn (\r\n \t\t<>\r\n \t\t\t<footer className={classes.footer}>\r\n-\t\t\t\t<p className={classes['items-left']}>{itemsCount} items left</p>\r\n+\t\t\t\t<p className={classes['items-left']}>{itemsLeftCount} items left</p>\r\n \t\t\t\t<button className={classes['filter-button']}>Clear Completed</button>\r\n \t\t\t</footer>\r\n \t\t\t<div className={classes['filter-buttons-container']}>\r\n \t\t\t\t<button className={classes['filter-button']}>All</button>\r\n"
+                },
+                {
+                    "date": 1695644320336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+import classes from './TodoListFooter.module.css';\r\n+\r\n+const TodoListMobileFooter = ({ itemsLeftCount }) => {\r\n+\treturn (\r\n+\t\t<>\r\n+\t\t\t<footer className={classes.footer}>\r\n+\t\t\t\t<p className={classes['items-left']}>{itemsLeftCount} items left</p>\r\n+\t\t\t\t<button className={classes['filter-button']}>Clear Completed</button>\r\n+\t\t\t</footer>\r\n+\t\t\t<div className={classes['filter-buttons-container']}>\r\n+\t\t\t<button className={classes['filter-button']} onClick={filterHandlerLift.bind(this, 'all')}>\r\n+\t\t\t\t\tAll\r\n+\t\t\t\t</button>\r\n+\t\t\t\t<button className={classes['filter-button']} onClick={filterHandlerLift.bind(this, 'active')}>\r\n+\t\t\t\t\tActive\r\n+\t\t\t\t</button>\r\n+\t\t\t\t<button className={classes['filter-button']} onClick={filterHandlerLift.bind(this, 'completed')}>\r\n+\t\t\t\t\tCompleted\r\n+\t\t\t\t</button>\r\n+\t\t\t</div>\r\n+\t\t</>\r\n+\t);\r\n+};\r\n+\r\n+export default TodoListMobileFooter;\r\n"
                 }
             ],
             "date": 1695632512843,

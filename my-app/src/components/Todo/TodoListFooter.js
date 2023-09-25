@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
+import { todosActions } from '../../store';
 import TodoListMobileFooter from './TodoListMobileFooter';
 import TodoListDesktopFooter from './TodoListDesktopFooter';
 
 const TodoListFooter = () => {
 	const itemsLeftCount = useSelector(state => state.todos.filter(todo => todo.isCompleted === false).length);
+	const dispatch = useDispatch();
 
 	const [width, setWidth] = useState(window.innerWidth);
 	const widthDesktopBreakpoint = 576;
@@ -19,12 +21,16 @@ const TodoListFooter = () => {
 		setWidth(window.innerWidth);
 	};
 
+	const filterHandler = (filter, event) => {
+		dispatch(todosActions.filterTodos(filter));
+	};
+
 	return (
 		<>
 			{isMobile ? (
-				<TodoListMobileFooter itemsLeftCount={itemsLeftCount} />
+				<TodoListMobileFooter itemsLeftCount={itemsLeftCount} filterHandler={filterHandler} />
 			) : (
-				<TodoListDesktopFooter itemsLeftCount={itemsLeftCount} />
+				<TodoListDesktopFooter itemsLeftCount={itemsLeftCount} filterHandler={filterHandler} />
 			)}
 		</>
 	);
