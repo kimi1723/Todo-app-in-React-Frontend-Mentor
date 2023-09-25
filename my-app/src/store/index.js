@@ -23,6 +23,12 @@ const todosSlice = createSlice({
 
 			todo.isCompleted = !todo.isCompleted;
 		},
+		deleteTodo(state, action) {
+			const todoId = action.payload;
+			const todoIndex = state.todos.findIndex(todo => todo.id === todoId);
+
+			state.todos.splice(todoIndex, 1);
+		},
 		clearCompletedTodos(state, action) {},
 	},
 });

@@ -7,8 +7,12 @@ const TodoListItem = ({ text, id }) => {
 	const dispatch = useDispatch();
 	const isCompleted = useSelector(state => state.todos.find(todo => todo.id === id).isCompleted);
 
-	const todoCompletionHandler = e => {
+	const todoCompletionHandler = () => {
 		dispatch(todosActions.handleTodoCompletion(id));
+	};
+
+	const deleteTodoHandler = () => {
+		dispatch(todosActions.deleteTodo(id));
 	};
 
 	const todoAdditionalClasses = isCompleted ? 'completed' : '';
@@ -22,7 +26,7 @@ const TodoListItem = ({ text, id }) => {
 					{text}
 				</p>
 			</div>
-			<button type="button" className={classes['cross-btn']}>
+			<button type="button" className={classes['cross-btn']} onClick={deleteTodoHandler}>
 				<svg className={classes['cross-icon']} xmlns="http://www.w3.org/2000/svg" width="18" height="18">
 					<path
 						fill="#494C6B"
