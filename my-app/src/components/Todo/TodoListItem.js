@@ -6,9 +6,11 @@ import { todosActions } from '../../store';
 const TodoListItem = ({ text, id }) => {
 	const dispatch = useDispatch();
 	const isCompleted = useSelector(state => state.todos.find(todo => todo.id === id).isCompleted);
+	const filter = useSelector(state => state.filter);
 
 	const todoCompletionHandler = () => {
 		dispatch(todosActions.handleTodoCompletion(id));
+		dispatch(todosActions.filterTodos(filter));
 	};
 
 	const deleteTodoHandler = () => {

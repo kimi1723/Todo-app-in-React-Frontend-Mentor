@@ -7,6 +7,7 @@ const initialState = {
 		{ title: 'Complete course3', isCompleted: false, id: 3, isVisible: true },
 		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
 	],
+	filter: 'all',
 };
 
 const todosSlice = createSlice({
@@ -32,6 +33,8 @@ const todosSlice = createSlice({
 		},
 		filterTodos(state, action) {
 			const filter = action.payload;
+
+			state.filter = filter;
 
 			switch (filter) {
 				case 'all':
