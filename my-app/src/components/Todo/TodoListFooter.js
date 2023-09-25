@@ -1,9 +1,13 @@
+import classes from './TodoListFooter.module.css';
+
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { todosActions } from '../../store';
 import TodoListMobileFooter from './TodoListMobileFooter';
 import TodoListDesktopFooter from './TodoListDesktopFooter';
+
+let activeFilter = 'all';
 
 const TodoListFooter = () => {
 	const itemsLeftCount = useSelector(state => state.todos.filter(todo => todo.isCompleted === false).length);
@@ -23,14 +27,47 @@ const TodoListFooter = () => {
 
 	const filterHandler = (filter, event) => {
 		dispatch(todosActions.filterTodos(filter));
+
+		activeFilter = filter;
+		event.target.blur();
 	};
+
+	const filterClasses = {
+		allClasses: classes['filter-button'],
+		activeClasses: classes['filter-button'],
+		completedClasses: classes['filter-button'],
+	};
+
+	switch (activeFilter) {
+		case 'all':
+			filterClasses.allClasses = `${classes['filter-button']} ${classes.active}`;
+			break;
+		case 'active':
+			filterClasses.activeClasses = `${classes['filter-button']} ${classes.active}`;
+			break;
+		case 'completed':
+			filterClasses.completedClasses = `${classes['filter-button']} ${classes.active}`;
+			break;
+		default:
+			console.log('error');
+	}
 
 	return (
 		<>
 			{isMobile ? (
-				<TodoListMobileFooter itemsLeftCount={itemsLeftCount} filterHandler={filterHandler} />
+				<TodoListMobileFooter
+					itemsLeftCount={itemsLeftCount}
+					filterHandler={filterHandler}
+					activeFilter={activeFilter}
+					filterClasses={filterClasses}
+				/>
 			) : (
-				<TodoListDesktopFooter itemsLeftCount={itemsLeftCount} filterHandler={filterHandler} />
+				<TodoListDesktopFooter
+					itemsLeftCount={itemsLeftCount}
+					filterHandler={filterHandler}
+					activeFilter={activeFilter}
+					filterClasses={filterClasses}
+				/>
 			)}
 		</>
 	);

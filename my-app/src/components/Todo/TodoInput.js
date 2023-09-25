@@ -1,13 +1,14 @@
 import classes from './TodoInput.module.css';
 
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { todosActions } from '../../store';
 
 import TodoError from './TodoError';
 
 const TodoInput = () => {
 	const dispatch = useDispatch();
+	const filter = useSelector(state => state.filter);
 	const [inputValue, setInputValue] = useState('');
 	const [isEmpty, setIsEmpty] = useState(true);
 	const [isTouched, setIsTouched] = useState(false);
@@ -30,6 +31,7 @@ const TodoInput = () => {
 		}
 
 		dispatch(todosActions.addTodo(enteredTodo));
+		dispatch(todosActions.filterTodos(filter));
 
 		setInputValue('');
 		setIsTouched(false);

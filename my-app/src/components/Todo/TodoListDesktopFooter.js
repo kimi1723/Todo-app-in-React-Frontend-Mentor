@@ -1,6 +1,6 @@
 import classes from './TodoListFooter.module.css';
 
-const TodoListDesktopFooter = ({ itemsLeftCount, filterHandler }) => {
+const TodoListDesktopFooter = ({ itemsLeftCount, filterHandler, filterClasses }) => {
 	const filterHandlerLift = (filter, event) => {
 		filterHandler(filter, event);
 	};
@@ -9,13 +9,13 @@ const TodoListDesktopFooter = ({ itemsLeftCount, filterHandler }) => {
 		<footer className={classes.footer}>
 			<p className={classes['items-left']}>{itemsLeftCount} items left</p>
 			<div className={classes['filter-buttons-container']}>
-				<button className={classes['filter-button']} onClick={filterHandlerLift.bind(this, 'all')}>
+				<button className={filterClasses.allClasses} onClick={filterHandlerLift.bind(this, 'all')}>
 					All
 				</button>
-				<button className={classes['filter-button']} onClick={filterHandlerLift.bind(this, 'active')}>
+				<button className={filterClasses.activeClasses} onClick={filterHandlerLift.bind(this, 'active')}>
 					Active
 				</button>
-				<button className={classes['filter-button']} onClick={filterHandlerLift.bind(this, 'completed')}>
+				<button className={filterClasses.completedClasses} onClick={filterHandlerLift.bind(this, 'completed')}>
 					Completed
 				</button>
 			</div>
