@@ -7,15 +7,23 @@ import { todosActions } from '../../store';
 import TodoListMobileFooter from './TodoListMobileFooter';
 import TodoListDesktopFooter from './TodoListDesktopFooter';
 
-let activeFilter = 'all';
+// let activeFilter = 'all';
 
 const TodoListFooter = () => {
 	const itemsLeftCount = useSelector(state => state.todos.filter(todo => todo.isCompleted === false).length);
 	const dispatch = useDispatch();
 
+	const [activeFilter, setActiveFilter] = useState('all');
 	const [width, setWidth] = useState(window.innerWidth);
+
 	const widthDesktopBreakpoint = 576;
 	const isMobile = width < widthDesktopBreakpoint;
+
+	const filterClasses = {
+		allClasses: classes['filter-button'],
+		activeClasses: classes['filter-button'],
+		completedClasses: classes['filter-button'],
+	};
 
 	useEffect(() => {
 		window.addEventListener('resize', resizeHandler);
@@ -28,7 +36,7 @@ const TodoListFooter = () => {
 	const filterHandler = (filter, event) => {
 		dispatch(todosActions.filterTodos(filter));
 
-		activeFilter = filter;
+		setActiveFilter(filter);
 		event.target.blur();
 	};
 
@@ -36,22 +44,19 @@ const TodoListFooter = () => {
 		dispatch(todosActions.clearCompletedTodos());
 	};
 
-	const filterClasses = {
-		allClasses: classes['filter-button'],
-		activeClasses: classes['filter-button'],
-		completedClasses: classes['filter-button'],
-	};
-
 	switch (activeFilter) {
 		case 'all':
 			filterClasses.allClasses = `${classes['filter-button']} ${classes.active}`;
 			break;
+
 		case 'active':
 			filterClasses.activeClasses = `${classes['filter-button']} ${classes.active}`;
 			break;
+
 		case 'completed':
 			filterClasses.completedClasses = `${classes['filter-button']} ${classes.active}`;
 			break;
+
 		default:
 			console.log('Error filtering classes for filtering buttons');
 	}

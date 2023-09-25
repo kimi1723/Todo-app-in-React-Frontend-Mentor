@@ -13,7 +13,7 @@ const TodoListMobileFooter = ({ itemsLeftCount, filterHandler, filterClasses, cl
 		<>
 			<footer className={classes.footer}>
 				<p className={classes['items-left']}>{itemsLeftCount} items left</p>
-				<button className={classes['filter-button']} onClick={clearCompletedHandler}>
+				<button className={classes['filter-button']} onClick={clearCompletedHandlerLift}>
 					Clear Completed
 				</button>
 			</footer>
