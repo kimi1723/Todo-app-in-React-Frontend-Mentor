@@ -35,9 +35,7 @@ const TodoList = () => {
 	};
 
 	const todoItems = todosArray.map((todo, index) => {
-		if (todo.isVisible !== true) {
-			return null;
-		}
+		if (todo.isVisible !== true) return null;
 
 		return (
 			<TodoListItem

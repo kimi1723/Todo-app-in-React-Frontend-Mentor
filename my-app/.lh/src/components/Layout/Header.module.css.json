@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/Layout/Header.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1695727786553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695727792826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n \ttop: 0;\r\n \tleft: 0;\r\n \theight: clamp(200px, 30vh, 40vh);\r\n \twidth: 100vw;\r\n+\tmax-width: 100%;\r\n \tbackground-image: url(../../images/bg-mobile-dark.jpg);\r\n \tbackground-size: cover;\r\n \tz-index: -1;\r\n }\r\n"
+                }
+            ],
+            "date": 1695727786553,
+            "name": "Commit-0",
+            "content": ".header {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: space-around;\r\n\tpadding-top: 1.5em;\r\n\tmargin-bottom: 0.5em;\r\n\twidth: 100%;\r\n\tmax-width: 576px;\r\n\theight: clamp(175px, 25vh, 35vh);\r\n}\r\n\r\n.header-bg {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\theight: clamp(200px, 30vh, 40vh);\r\n\r\n\tbackground-image: url(../../images/bg-mobile-dark.jpg);\r\n\tbackground-size: cover;\r\n\tz-index: -1;\r\n}\r\n\r\n.heading {\r\n\ttext-transform: uppercase;\r\n\tletter-spacing: 0.4em;\r\n\ttext-align: left;\r\n\ttext-shadow: 1px 1px 1px #000;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n\t.heading {\r\n\t\tfont-size: 3rem;\r\n\t}\r\n\r\n\t.header-bg {\r\n\t\tbackground-image: url(../../images/bg-desktop-dark.jpg);\r\n\t}\r\n}\r\n"
+        }
+    ]
+}

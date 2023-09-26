@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/styles.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1695727649223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695727654558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \tflex-direction: column;\r\n \talign-items: center;\r\n \tpadding: 0 1.5em 2em;\r\n \tmin-height: 100vh;\r\n-\twidth: 100vw;\r\n+\t/* width: 100vw; */\r\n }\r\n \r\n /* -\r\n 375/1440\r\n"
+                },
+                {
+                    "date": 1695727687054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \tbox-sizing: border-box;\r\n }\r\n \r\n body {\r\n-\t/* width: 100vw; */\r\n+\twidth: 100vw;\r\n \tfont-family: 'Josefin Sans', sans-serif;\r\n \tfont-size: 18px;\r\n \tbackground-color: hsl(235, 21%, 11%);\r\n \tcolor: #fff;\r\n"
+                },
+                {
+                    "date": 1695727702136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n }\r\n \r\n body {\r\n \twidth: 100vw;\r\n+\tmax-width: 100%;\r\n \tfont-family: 'Josefin Sans', sans-serif;\r\n \tfont-size: 18px;\r\n \tbackground-color: hsl(235, 21%, 11%);\r\n \tcolor: #fff;\r\n"
+                },
+                {
+                    "date": 1695727728596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \tflex-direction: column;\r\n \talign-items: center;\r\n \tpadding: 0 1.5em 2em;\r\n \tmin-height: 100vh;\r\n-\t/* width: 100vw; */\r\n+\twidth: 100vw;\r\n }\r\n \r\n /* -\r\n 375/1440\r\n"
+                },
+                {
+                    "date": 1695727796048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \talign-items: center;\r\n \tpadding: 0 1.5em 2em;\r\n \tmin-height: 100vh;\r\n \twidth: 100vw;\r\n-\tmax-width: 100%;\r\n+\t/* max-width: 100%; */\r\n }\r\n \r\n /* -\r\n 375/1440\r\n"
+                },
+                {
+                    "date": 1695727802618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \tbox-sizing: border-box;\r\n }\r\n \r\n body {\r\n-\twidth: 100vw;\r\n+\t/* width: 100vw; */\r\n \tmax-width: 100%;\r\n \tfont-family: 'Josefin Sans', sans-serif;\r\n \tfont-size: 18px;\r\n \tbackground-color: hsl(235, 21%, 11%);\r\n"
+                }
+            ],
+            "date": 1695727649223,
+            "name": "Commit-0",
+            "content": "*,\r\n*::before,\r\n*::after {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\nbody {\r\n\t/* width: 100vw; */\r\n\tfont-family: 'Josefin Sans', sans-serif;\r\n\tfont-size: 18px;\r\n\tbackground-color: hsl(235, 21%, 11%);\r\n\tcolor: #fff;\r\n}\r\n\r\n.root {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\r\n\tpadding: 0 1.5em 2em;\r\n\tmin-height: 100vh;\r\n\twidth: 100vw;\r\n}\r\n\r\n/* -\r\n375/1440\r\n### Primary\r\n\r\n- Bright Blue: hsl(220, 98%, 61%)\r\n- Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)\r\n\r\n Very Dark Blue: hsl(235, 21%, 11%)\r\n- Very Dark Desaturated Blue: hsl(235, 24%, 19%)\r\n- Light Grayish Blue: hsl(234, 39%, 85%)\r\n- Light Grayish Blue (hover): hsl(236, 33%, 92%)\r\n- Dark Grayish Blue: hsl(234, 11%, 52%)\r\n- Very Dark Grayish Blue: hsl(233, 14%, 35%)\r\n- Very Dark Grayish Blue: hsl(237, 14%, 26%)\r\n */\r\n"
+        }
+    ]
+}

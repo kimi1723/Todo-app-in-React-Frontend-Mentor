@@ -15,6 +15,7 @@
 	left: 0;
 	height: clamp(200px, 30vh, 40vh);
 	width: 100vw;
+	max-width: 100%;
 	background-image: url(../../images/bg-mobile-dark.jpg);
 	background-size: cover;
 	z-index: -1;
