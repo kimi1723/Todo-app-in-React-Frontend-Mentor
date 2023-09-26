@@ -3,9 +3,10 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	min-height: 50vh;
 }
 
-.dnd-p {
+.info-text {
 	margin: 2.5em 0;
 	text-align: center;
 	color: hsl(234, 11%, 52%);
