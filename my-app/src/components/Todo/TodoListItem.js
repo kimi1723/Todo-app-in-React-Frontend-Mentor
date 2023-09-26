@@ -1,3 +1,4 @@
+// chodzi o index przekazywany w filtrze
 import classes from './TodoListItem.module.css';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,6 +8,7 @@ const TodoListItem = ({ text, id, dragStartHandler, index, dragEnterHandler, dro
 	const dispatch = useDispatch();
 	const isCompleted = useSelector(state => state.todos.find(todo => todo.id === id).isCompleted);
 	const filter = useSelector(state => state.filter);
+	const isVisible = useSelector(state => state.todos[index].isVisible);
 
 	const todoCompletionHandler = () => {
 		dispatch(todosActions.handleTodoCompletion(id));
@@ -19,8 +21,11 @@ const TodoListItem = ({ text, id, dragStartHandler, index, dragEnterHandler, dro
 
 	const todoAdditionalClasses = isCompleted ? 'completed' : '';
 
+	const dndWorkaround = isVisible ? {} : { display: 'none' };
+
 	return (
 		<li
+			style={dndWorkaround}
 			className={classes.li}
 			draggable
 			onDragStart={() => dragStartHandler(index)}

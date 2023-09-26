@@ -27,6 +27,7 @@ const TodoList = () => {
 
 		copiedTodosArray.splice(dragItem.current, 1);
 		copiedTodosArray.splice(dragOverItem.current, 0, dragItemContent);
+
 		dragItem.current = null;
 		dragOverItem.current = null;
 
@@ -34,7 +35,7 @@ const TodoList = () => {
 	};
 
 	const todoItems = todosArray
-		.filter(todo => todo.isVisible === true)
+		.filter((todo, index) => todo.isVisible === true)
 		.map((todo, index) => (
 			<TodoListItem
 				key={todo.id}
