@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Layout/Footer.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695727991417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695727997433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const Footer = () => {\r\n-\treturn <footer></footer>;\r\n+\treturn <footer>\r\n+        Drag and drop to reoder list\r\n+    </footer>;\r\n };\r\n \r\n export default Footer;\r\n"
+                },
+                {
+                    "date": 1695728006853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const Footer = () => {\r\n-\treturn <footer>Drag and drop to reoder list</footer>;\r\n+\treturn <footer><p>Drag and drop to reoder list</p></footer>;\r\n };\r\n \r\n export default Footer;\r\n"
+                }
+            ],
+            "date": 1695727991417,
+            "name": "Commit-0",
+            "content": "const Footer = () => {\r\n    return <footer>\r\n        \r\n    </footer>\r\n};\r\n\r\nexport default Footer;\r\n"
+        }
+    ]
+}

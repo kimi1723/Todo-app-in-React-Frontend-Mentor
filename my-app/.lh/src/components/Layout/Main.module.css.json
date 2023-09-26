@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Layout/Main.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695728303691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695728331272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n \twidth: 100%;\r\n }\r\n \r\n .dnd-p {\r\n-\t\r\n+\thsl(233, 14%, 35%)\r\n }\r\n"
+                },
+                {
+                    "date": 1695728342377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n \twidth: 100%;\r\n }\r\n \r\n .dnd-p {\r\n-\tcolor: hsl(233, 14%, 35%);\r\n+\thsl(237, 14%, 26%)\r\n }\r\n"
+                }
+            ],
+            "date": 1695728303691,
+            "name": "Commit-0",
+            "content": ".main {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n\talign-items: center;\r\n\twidth: 100%;\r\n}\r\n\r\n.\r\n"
+        }
+    ]
+}

@@ -5,6 +5,7 @@ const Main = () => {
 	return (
 		<main className={classes.main}>
 			<TodoList />
+			<p className={classes['dnd-p']}>Drag and drop to reoder list</p>
 		</main>
 	);
 };

@@ -1,0 +1,24 @@
+.attribution {
+	font-size: 0.7rem;
+	text-align: center;
+	color: hsl(234, 11%, 52%);
+}
+
+.attribution a {
+	color: hsl(234, 39%, 85%);
+	text-decoration: none;
+	outline: none;
+	transition: color 0.3s;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: hsl(220, 98%, 61%);
+	}
+}
+
+@media (min-width: 576px) {
+	.attribution {
+		font-size: 0.9rem;
+	}
+}

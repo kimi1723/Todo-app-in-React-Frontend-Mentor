@@ -4,12 +4,7 @@ const initialState = {
 	todos: [
 		{ title: 'Complete course1', isCompleted: false, id: 1, isVisible: true },
 		{ title: 'Complete course2', isCompleted: false, id: 2, isVisible: true },
-		{ title: 'Complete course3', isCompleted: false, id: 3, isVisible: true },
-		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
-		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
-		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
-		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
-		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
+
 		{ title: 'Complete course4', isCompleted: true, id: 4, isVisible: true },
 	],
 	filter: 'all',

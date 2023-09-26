@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Layout/Footer.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1695728552629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695728562237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .attribution {\r\n-\tfont-size: 11px;\r\n+\tfont-size: 1rem;\r\n \ttext-align: center;\r\n }\r\n .attribution a {\r\n \tcolor: hsl(228, 45%, 44%);\r\n"
+                },
+                {
+                    "date": 1695728640517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n .attribution {\r\n \tfont-size: 1rem;\r\n-\ttext-align: center;\r\n+\t/* text-align: center; */\r\n }\r\n .attribution a {\r\n \tcolor: hsl(228, 45%, 44%);\r\n }\r\n"
+                }
+            ],
+            "date": 1695728552629,
+            "name": "Commit-0",
+            "content": ".attribution {\r\n    font-size: 11px;\r\n    text-align: center;\r\n  }\r\n  .attribution a {\r\n    color: hsl(228, 45%, 44%);\r\n  }"
+        }
+    ]
+}
