@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/components/Todo/TodoError.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1695738509509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695738521196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn <p className={classes['error']}>Please enter a todo title!</p>;\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695738587990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn <p className={classes['error-text']}>Please enter a todo title!</p>;\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695738710079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import classes from './TodoError.module.css';\r\n \r\n const TodoError = () => {\r\n-\treturn <p className={classes['error-text']}>Please enter a todo title!</p>;\r\n+\treturn <p className={classes['error-text']}>Please enter a todo title first!</p>;\r\n };\r\n \r\n export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695738736480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn <div>\r\n+\t\t{/* <p className={classes['error-text']}>Please enter a todo title first!</p> */}\r\n+\t</div>;\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695738743932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import classes from './TodoError.module.css';\r\n \r\n const TodoError = () => {\r\n-\treturn <div>{/* <p className={classes['error-text']}>Please enter a todo title first!</p> */}</div>;\r\n+\treturn <div><button>!</button>{/* <p className={classes['error-text']}>Please enter a todo title first!</p> */}</div>;\r\n };\r\n \r\n export default TodoError;\r\n"
+                },
+                {
+                    "date": 1695738790654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import classes from './TodoError.module.css';\r\n+\r\n+const TodoError = () => {\r\n+\treturn (\r\n+\t\t<div>\r\n+\t\t\t<button className={}>!</button>\r\n+\t\t\t{/* <p className={classes['error-text']}>Please enter a todo title first!</p> */}\r\n+\t\t</div>\r\n+\t);\r\n+};\r\n+\r\n+export default TodoError;\r\n"
+                }
+            ],
+            "date": 1695738509509,
+            "name": "Commit-0",
+            "content": "import classes from './TodoError.module.css';\r\n\r\nconst TodoError = () => {\r\n\treturn <divp className={classes['error-container']}>Please enter a todo title!</divp>;\r\n};\r\n\r\nexport default TodoError;\r\n"
+        }
+    ]
+}

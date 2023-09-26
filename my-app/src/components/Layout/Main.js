@@ -10,8 +10,8 @@ const Main = () => {
 	return (
 		<main className={classes.main}>
 			{areThereAnyTodos && <TodoList />}
-			{areThereAnyTodos && <p className={classes['info-text']}>Drag and drop to reoder list</p>}
-			{!areThereAnyTodos && <p className={classes['info-text']}>Add your first todo!</p>}
+			{areThereAnyTodos && <p className={classes['dnd-text']}>Drag and drop to reoder list</p>}
+			{!areThereAnyTodos && <p className={classes['info-text']}>Feel free to create your first todo!</p>}
 		</main>
 	);
 };

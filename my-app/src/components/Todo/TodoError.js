@@ -1,7 +1,7 @@
 import classes from './TodoError.module.css';
 
 const TodoError = () => {
-	return <div className={classes['error-container']}>Please enter a todo title!</div>;
+	return <div>{/* <p className={classes['error-text']}>Please enter a todo title first!</p> */}</div>;
 };
 
 export default TodoError;

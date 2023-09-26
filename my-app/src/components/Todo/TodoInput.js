@@ -1,3 +1,4 @@
+// cleanup errorow itd
 import classes from './TodoInput.module.css';
 
 import { useState } from 'react';
@@ -37,15 +38,21 @@ const TodoInput = () => {
 		setIsTouched(false);
 	};
 
+	const inputClasses = isEmpty && isTouched ? `${classes['input']} ${classes['input-error']}` : classes['input'];
+	const labelClasses = isEmpty && isTouched ? `${classes['label']} ${classes['label-error']}` : classes['label'];
+	const formClasses = isEmpty && isTouched ? `${classes['form']} ${classes['form-error']}` : classes['form'];
+	const inputPlaceholder = isEmpty && isTouched ? 'Please enter a valid todo!' : 'Create a new todo...';
+
 	return (
-		<form className={classes.form} onSubmit={addTodoHandler}>
+		<form className={formClasses} onSubmit={addTodoHandler}>
 			{isEmpty && isTouched && <TodoError />}
-			<label htmlFor="todo-input" className={classes.label}></label>
+			{/* {<TodoError />} */}
+			<label htmlFor="todo-input" className={labelClasses}></label>
 			<input
 				type="text"
 				id="todo-input"
-				placeholder="Create a new todo..."
-				className={classes[`input`]}
+				placeholder={inputPlaceholder}
+				className={inputClasses}
 				value={inputValue}
 				onChange={onChangeHandler}
 			/>
