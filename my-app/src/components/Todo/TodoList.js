@@ -34,9 +34,12 @@ const TodoList = () => {
 		dispatch(todosActions.rearrangeTodos(copiedTodosArray));
 	};
 
-	const todoItems = todosArray
-		.filter((todo, index) => todo.isVisible === true)
-		.map((todo, index) => (
+	const todoItems = todosArray.map((todo, index) => {
+		if (todo.isVisible !== true) {
+			return null;
+		}
+
+		return (
 			<TodoListItem
 				key={todo.id}
 				id={todo.id}
@@ -46,7 +49,8 @@ const TodoList = () => {
 				dropHandler={dropHandler}
 				index={index}
 			/>
-		));
+		);
+	});
 
 	return (
 		<>
