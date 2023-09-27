@@ -1,12 +1,13 @@
 import classes from './TodoInput.module.css';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { todosActions } from '../../store';
 
 const TodoInput = () => {
 	const dispatch = useDispatch();
 	const filter = useSelector(state => state.filter);
+	const inputControlReference = useRef(null);
 	const [inputValue, setInputValue] = useState('');
 	const [isEmpty, setIsEmpty] = useState(true);
 	const [isTouched, setIsTouched] = useState(false);
@@ -40,6 +41,8 @@ const TodoInput = () => {
 
 		setInputValue('');
 		setIsTouched(false);
+
+		inputControlReference.current.blur();
 	};
 
 	const inputClasses = isEmpty && isTouched ? `${classes['input']} ${classes['input-error']}` : classes['input'];
@@ -57,6 +60,7 @@ const TodoInput = () => {
 				value={inputValue}
 				onChange={onChangeHandler}
 				onBlur={blurHandler}
+				ref={inputControlReference}
 			/>
 		</form>
 	);
