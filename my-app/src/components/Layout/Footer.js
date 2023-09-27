@@ -2,7 +2,7 @@ import classes from './Footer.module.css';
 
 const Footer = () => {
 	return (
-		<footer>
+		<footer className={classes['footer']}>
 			<p className={classes['attribution']}>
 				Challenge by&nbsp;
 				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">

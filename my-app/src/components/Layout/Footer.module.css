@@ -1,6 +1,7 @@
-footer {
-	justify-self: flex-end;
+.footer {
+	margin-top: auto;
 }
+
 .attribution {
 	font-size: 0.7rem;
 	text-align: center;

@@ -80,16 +80,19 @@
 }
 
 .label-error {
-	border: solid 2px rgba(240, 0, 0, 0.8);
+	/* border: solid 2px rgba(240, 0, 0, 0.8); */
 }
 
+.input-error::placeholder,
 .input-error {
-	color: hsl(0, 100%, 50%);
+	color: rgb(220, 20, 60);
 }
 
 .input-error:hover,
-.input-error:focus {
-	color: hsl(0, 100%, 45%);
+.input-error:focus,
+.input-error:hover::placeholder,
+.input-error::placeholder:focus {
+	color: rgb(220, 20, 60);
 }
 
 .form:has(.input:hover) .label,
