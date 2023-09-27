@@ -1,11 +1,8 @@
-// cleanup errorow itd
 import classes from './TodoInput.module.css';
 
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { todosActions } from '../../store';
-
-import TodoError from './TodoError';
 
 const TodoInput = () => {
 	const dispatch = useDispatch();
@@ -17,7 +14,14 @@ const TodoInput = () => {
 	const onChangeHandler = e => {
 		setInputValue(e.target.value);
 		setIsTouched(true);
-		e.target.value === '' ? setIsEmpty(true) : setIsEmpty(false);
+		e.target.value.trim() === '' ? setIsEmpty(true) : setIsEmpty(false);
+	};
+
+	const blurHandler = e => {
+		if (inputValue.trim() === '') {
+			setIsEmpty(true);
+			setIsTouched(true);
+		}
 	};
 
 	const addTodoHandler = e => {
@@ -25,7 +29,7 @@ const TodoInput = () => {
 
 		const enteredTodo = inputValue;
 
-		if (enteredTodo === '') {
+		if (enteredTodo.trim() === '') {
 			setIsEmpty(true);
 			setIsTouched(true);
 			return;
@@ -39,15 +43,12 @@ const TodoInput = () => {
 	};
 
 	const inputClasses = isEmpty && isTouched ? `${classes['input']} ${classes['input-error']}` : classes['input'];
-	const labelClasses = isEmpty && isTouched ? `${classes['label']} ${classes['label-error']}` : classes['label'];
 	const formClasses = isEmpty && isTouched ? `${classes['form']} ${classes['form-error']}` : classes['form'];
 	const inputPlaceholder = isEmpty && isTouched ? 'Please enter a valid todo!' : 'Create a new todo...';
 
 	return (
 		<form className={formClasses} onSubmit={addTodoHandler}>
-			{isEmpty && isTouched && <TodoError />}
-			{/* {<TodoError />} */}
-			<label htmlFor="todo-input" className={labelClasses}></label>
+			<label htmlFor="todo-input" className={classes.label}></label>
 			<input
 				type="text"
 				id="todo-input"
@@ -55,6 +56,7 @@ const TodoInput = () => {
 				className={inputClasses}
 				value={inputValue}
 				onChange={onChangeHandler}
+				onBlur={blurHandler}
 			/>
 		</form>
 	);
