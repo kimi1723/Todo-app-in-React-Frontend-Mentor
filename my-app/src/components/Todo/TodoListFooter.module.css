@@ -1,7 +1,8 @@
 .footer {
 	display: flex;
 	justify-content: space-between;
-	padding: 1.5em;
+	align-items: center;
+	padding: 1.1em 0.9em;
 	width: 100%;
 	max-width: 576px;
 	font-size: 1rem;
@@ -21,7 +22,7 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: 1em;
-	padding: 1em 4em;
+	padding: 0.6em 4em;
 	width: 100%;
 	max-width: 576px;
 	background-color: hsl(235, 24%, 19%);
@@ -32,6 +33,7 @@
 }
 
 .filter-button {
+	padding: 0.4em 0.2em;
 	font-size: 1rem;
 	background: none;
 	outline: none;
@@ -51,10 +53,6 @@
 }
 
 @media (min-width: 576px) {
-	.footer {
-		align-items: center;
-	}
-
 	.filter-buttons-container {
 		margin: 0;
 		padding: 0;
