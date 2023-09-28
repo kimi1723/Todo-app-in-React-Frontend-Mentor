@@ -8,7 +8,7 @@
 
 .dnd-text,
 .info-text {
-	margin: 2.5em 0;
+	margin: auto 0;
 	text-align: center;
 	color: hsl(234, 11%, 52%);
 }
