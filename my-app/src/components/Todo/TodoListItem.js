@@ -34,7 +34,11 @@ const TodoListItem = ({ text, id, dragStartHandler, index, dragEnterHandler, dro
 				</p>
 			</div>
 
-			<button type="button" className={classes['cross-btn']} onClick={deleteTodoHandler}>
+			<button
+				type="button"
+				className={classes['cross-btn']}
+				aria-label="Delete a single todo"
+				onClick={deleteTodoHandler}>
 				<svg className={classes['cross-icon']} xmlns="http://www.w3.org/2000/svg" width="18" height="18">
 					<path
 						fill="#494C6B"
