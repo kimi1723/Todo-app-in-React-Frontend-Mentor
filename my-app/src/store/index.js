@@ -3,7 +3,6 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 const initialState = {
 	todos: [],
 	filter: 'all',
-	changed: false,
 };
 
 const todosSlice = createSlice({
@@ -54,49 +53,10 @@ const todosSlice = createSlice({
 		rearrangeTodos(state, action) {
 			state.todos = action.payload;
 		},
-		replaceTodos(state, action) {
-			const todos = [];
-
-			for (const todo in action.payload.todos) {
-				todos.push(todo[0]);
-			}
-			state.todos = action.payload.todos;
-			console.log(todos);
-			console.log(action.payload.todos);
-		},
 	},
 });
 
 const store = configureStore({ reducer: todosSlice.reducer });
-
-export const fetchTodos = dispatch => {
-	return async dispatch => {
-		const fetchData = async () => {
-			const URL = 'https://react-cdfed-default-rtdb.firebaseio.com/todos.json';
-			const response = await fetch(URL);
-
-			if (!response.ok) {
-				throw new Error('Sorry, could not fetch todos data.');
-			}
-
-			const data = await response.json();
-
-			return data;
-		};
-
-		try {
-			const todosData = await fetchData();
-
-			dispatch(
-				todosActions.replaceTodos({
-					todos: todosData || [],
-				}),
-			);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-};
 
 export const todosActions = todosSlice.actions;
 

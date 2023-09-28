@@ -1,7 +1,7 @@
 import classes from './TodoList.module.css';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import TodoListItem from './TodoListItem';
 import TodoListFooter from './TodoListFooter';
