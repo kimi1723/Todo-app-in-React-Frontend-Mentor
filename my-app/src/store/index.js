@@ -13,7 +13,6 @@ const todosSlice = createSlice({
 		addTodo(state, action) {
 			const newTodo = action.payload;
 
-			state.changed = true;
 			state.todos.push({ title: newTodo, isCompleted: false, id: Math.random(), isVisible: true });
 		},
 		handleTodoCompletion(state, action) {
@@ -21,14 +20,12 @@ const todosSlice = createSlice({
 			const todo = state.todos.find(todo => todo.id === todoId);
 
 			todo.isCompleted = !todo.isCompleted;
-			state.changed = true;
 		},
 		deleteTodo(state, action) {
 			const todoId = action.payload;
 			const todoIndex = state.todos.findIndex(todo => todo.id === todoId);
 
 			state.todos.splice(todoIndex, 1);
-			state.changed = true;
 		},
 		filterTodos(state, action) {
 			const filter = action.payload;
@@ -53,13 +50,19 @@ const todosSlice = createSlice({
 			const newState = state.todos.filter(todo => todo.isCompleted === false);
 
 			state.todos = newState;
-			state.changed = true;
 		},
 		rearrangeTodos(state, action) {
 			state.todos = action.payload;
 		},
 		replaceTodos(state, action) {
+			const todos = [];
+
+			for (const todo in action.payload.todos) {
+				todos.push(todo[0]);
+			}
 			state.todos = action.payload.todos;
+			console.log(todos);
+			console.log(action.payload.todos);
 		},
 	},
 });
@@ -73,7 +76,7 @@ export const fetchTodos = dispatch => {
 			const response = await fetch(URL);
 
 			if (!response.ok) {
-				throw new Error('Something went wrong, could not fetch todos data.');
+				throw new Error('Sorry, could not fetch todos data.');
 			}
 
 			const data = await response.json();
@@ -89,10 +92,8 @@ export const fetchTodos = dispatch => {
 					todos: todosData || [],
 				}),
 			);
-
-			return { error: '', isError: false };
 		} catch (error) {
-			return { error: error.message, isError: true };
+			console.log(error);
 		}
 	};
 };
