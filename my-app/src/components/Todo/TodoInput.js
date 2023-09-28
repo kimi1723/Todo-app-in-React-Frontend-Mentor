@@ -8,6 +8,7 @@ const TodoInput = () => {
 	const dispatch = useDispatch();
 	const filter = useSelector(state => state.filter);
 	const inputControlReference = useRef(null);
+
 	const [inputValue, setInputValue] = useState('');
 	const [isEmpty, setIsEmpty] = useState(true);
 	const [isTouched, setIsTouched] = useState(false);

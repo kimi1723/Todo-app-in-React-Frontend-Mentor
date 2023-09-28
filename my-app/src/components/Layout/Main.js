@@ -2,52 +2,59 @@ import classes from './Main.module.css';
 import TodoList from '../Todo/TodoList';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchTodos } from '../../store';
-
-let isInitial = true;
 
 const Main = () => {
 	const dispatch = useDispatch();
 	const todos = useSelector(state => state.todos);
-	const todosAmount = useSelector(state => state.todos.length);
+	const changedStatus = useSelector(state => state.changed);
+	const todosAmount = todos.length;
 	const areThereAnyTodos = todosAmount > 0 ? true : false;
 
+	const [isError, setIsError] = useState(false);
+	const [errorMessage, setErrorMessage] = useState('');
+
 	useEffect(() => {
-		dispatch(fetchTodos());
+		const fetchData = async () => {
+			dispatch(fetchTodos()).then(result => {
+				setIsError(result.isError);
+				setErrorMessage(result.error);
+			});
+		};
+		fetchData();
 	}, [dispatch]);
 
 	useEffect(() => {
-		if (isInitial) {
-			isInitial = false;
-			return;
-		}
-
-		// if (!todos.changed) return;
+		if (!changedStatus) return;
 
 		const sendTodosData = async () => {
-			const URL = 'https://react-cdfed-default-rtdb.firebaseio.com/todos.json';
+			try {
+				const URL = 'https://react-cdfed-default-rtdb.firebaseio.com/todos.json';
 
-			const response = await fetch(URL, {
-				method: 'PUT',
-				body: JSON.stringify(todos),
-			});
+				const response = await fetch(URL, {
+					method: 'PUT',
+					body: JSON.stringify(todos),
+				});
 
-			if (!response.ok) {
-				throw new Error('Sorry, sending todos data failed.');
+				if (!response.ok) {
+					throw new Error('Something went wrong, sending todos data failed.');
+				}
+			} catch (error) {
+				setIsError(true);
+				setErrorMessage('Something went wrong, sending todos data failed.');
 			}
 		};
 
-		sendTodosData().catch(error => {
-			console.log(error);
-		});
-	}, [todos, dispatch]);
+		sendTodosData();
+	}, [todos, dispatch, changedStatus]);
 
 	return (
 		<main className={classes.main}>
-			{areThereAnyTodos && <TodoList />}
-			{areThereAnyTodos && <p className={classes['dnd-text']}>Drag and drop to reoder list</p>}
-			{!areThereAnyTodos && <p className={classes['info-text']}>Feel free to create your first todo!</p>}
+			{areThereAnyTodos && !isError && <TodoList />}
+			{areThereAnyTodos && !isError && <p className={classes['dnd-text']}>Drag and drop to reoder list</p>}
+			{!areThereAnyTodos && !isError && <p className={classes['info-text']}>Feel free to create your first todo!</p>}
+			{isError && <p className={classes['info-text']}>{errorMessage}</p>}
 		</main>
 	);
 };
